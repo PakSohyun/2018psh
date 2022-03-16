@@ -1,0 +1,95 @@
+@media screen and (min-width: 1024px){ /* PC */
+    *{box-sizing: border-box;}
+    body::-webkit-scrollbar{width: 10px;}
+    body::-webkit-scrollbar-track{background-color: #313131;}
+    body::-webkit-scrollbar-thumb{border-radius: 10px; background-color: #535353;}
+    html{height: 100%; font-size: 62.5%;}
+    body{width: 100%; height: 100%; background-color: #141414;}
+    .ko{letter-spacing: -1.5px;}
+    
+    header{position: fixed; z-index: 999; width: 100%; padding: 0 6.0rem; background-color: rgba(20,20,20,0.5); backdrop-filter: blur(15px);}
+    header > div{display: flex; justify-content: space-between; align-items: center; padding: 4.0rem 2.4em 2.4rem; border-bottom: 1px solid #646464;}
+    header > div h1 img{width: 100%;}
+    header > div nav .mui{display: none;}
+    header > div nav ul > li{display: inline-block; padding-left: 30px;}
+    header > div nav ul > li > a{font-size: 2.0rem; font-weight: 500; color: #fff;}
+    header > div nav ul > li > a:hover{color: #000aff;}
+    header > div nav ul > li > a.active{position: relative; margin: 0 20px; font-weight: 700; color: #000aff;}
+    header > div nav ul > li > a.active:after{content: ''; clear: both; position: absolute; top: 50%; left: 50%; z-index: -1; transform: translate3d(-50%,-50%,0); width: 140%; height: 180%; border-radius: 50%; border: 1px solid #000aff;}
+    
+    .inner{padding: 15.707% 8.377% 4.189%;}
+
+    main{margin-bottom: 16.8rem;}
+    main .inner{display: flex; flex-direction: column; align-items: center; padding: 8.377% 6.0rem 0;}
+    main .inner .img_box{width: 40%; margin-bottom: 12.0rem;}
+    main .inner .img_box img{width: 100%;}
+    main .inner .text{width: 100%; border: 1px solid #646464; border-width: 1px 0 1px; text-align: center;}
+    main .inner .text p{display: inline-block; padding: 3.2rem 3.2em; border: 1px solid #646464; border-width: 0 1px 0; color: #fff; font-size: 2.0rem; font-weight: 100; line-height: 3.0rem;}
+    
+    .about > div{padding: 0 6.0rem; display: flex; flex-direction: column;}
+    .about > div .tit{width: 100%; border-bottom: 1px solid #646464;}
+    .about > div .tit h3{padding: 0 5.587% 16.8rem; color: #fff; font-size: 14.0rem; font-weight: 600;}
+    .about > div .career{display: flex; border-bottom: 1px solid #646464;}
+    .about > div .career > div{width: 33.333%; padding:  16.0rem 5.587% 16.0rem;}
+    .about > div .career > div:not(:last-child){border-right: 1px solid #646464;}
+    .about > div .career > div h3{margin-bottom: 4.8rem; color: #fff; font-size: 2.4rem; font-weight: 500;}
+    .about > div .career > div span{display: inline-block; margin-right: 4%; color: #fff; font-size: 1.6rem; font-weight: 200; line-height: 2.8rem;}
+    .about > div .career > div p{display: inline-block; color: #fff; font-size: 1.6rem; font-weight: 100; line-height: 2.8rem;}
+
+    .sec{height: 100%;}
+    .numb{position: absolute; top: 16.512%; z-index: 999;}
+    .numb.active{position: fixed;}
+    .numb li{display: inline-block;}   
+    .numb a{margin-right: 20px; font-size: 2.0rem; color: #646464; font-weight: 500; transition-duration: 0.3s;}
+    .numb a.active{margin-right: 660px; color: #fff;}
+    .numb a.active:after{content: ""; clear: both; display: inline-block; margin-left: 10px; width: 14px; height: 14px; border-radius: 20px; background-color: #000aff;}
+    .sec .inner{position: relative; display: flex; align-items: flex-end; justify-content: space-between; height: 100%; padding: 15.707% 8.377% 4.189%;}
+    .sec:nth-of-type(2n-1) .inner{flex-direction: row-reverse}
+    .sec .inner .tit{position: relative;}
+    .sec.sec_02 .inner .tit{width: 55%;}
+    .sec .inner .tit h2{font-size: 18.0rem; color: #fff; font-weight: 600; line-height: 15.0rem; letter-spacing: -1.5px; cursor: default;}
+    .sec .inner .img_box{height: 100%;}
+    .sec .inner .img_box img{height: 100%;}
+    .sec .inner .tit .buttom_pc{position: absolute; left: 0; top: -20.0rem;}
+    .sec .inner .tit .buttom_pc div{display: flex; justify-content: center; align-items: center; width: 16.0rem; height: 16.0rem;}
+    .sec .inner .tit .buttom_pc div a{display: flex; justify-content: center; align-items: center; width: 16.0rem; height: 16.0rem; border: 1px solid #fff; border-radius: 100%; font-size: 3.0rem; color: #fff; background-color: #141414; background-color: transparent; transition-duration: 0.3s; }
+    .sec .inner .tit .buttom_pc div a:hover{height: 8.0rem;}   
+    .sec_04 br{display: none;}
+    /* ani_wrap */
+    .sec .inner .ani_wrap{overflow: hidden; position: relative; height: 100%;}
+    .sec .inner .ani_wrap .ani_box{position: absolute;}
+    .sec .inner .ani_wrap .ani_box span{display: inline-block; width: 100%; height: 100%; border-radius: 100%; background-color: #000aff; filter: blur(3px);}
+    .sec_01 .inner .ani_wrap{width: 24.0rem; margin-right: 12.0rem;}
+    .sec_01 .inner .ani_wrap .ani_box:nth-child(1){left: 50%; transform: translateX(-50%); animation: ani_01_1 2s forwards infinite ease-in alternate;}
+    .sec_01 .inner .ani_wrap .ani_box:nth-child(2){left: 50%; transform: translateX(-50%); animation: ani_01_2 2s forwards infinite ease-in alternate;}
+    .sec_01 .inner .ani_wrap .ani_box:nth-child(3){left: 50%; transform: translateX(-50%); animation: ani_01_3 2s forwards infinite ease-in alternate;}
+    @keyframes ani_01_1{0%{width: 24.0rem; height: 24.0rem; top: calc(100% - 24.0rem);} 100%{width: 12.0rem; height: 12.0rem; top: 0;}}
+    @keyframes ani_01_2{0%{width: 24.0rem; height: 24.0rem; top: calc(100% - 24.0rem);} 100%{width: 12.0rem; height: 12.0rem; top: calc(50% - 6.0rem);}}
+    @keyframes ani_01_3{0%{width: 24.0rem; height: 24.0rem; top: calc(100% - 24.0rem);} 100%{width: 12.0rem; height: 12.0rem; top: calc(100% - 12.0rem);}}
+    .sec_02 .inner .ani_wrap{width: 48.0rem; margin-left: 6.0rem;}
+    .sec_02 .inner .ani_wrap .ani_box:nth-child(1){animation: ani_02_1 2s forwards infinite ease-in alternate;}
+    .sec_02 .inner .ani_wrap .ani_box:nth-child(2){animation: ani_02_2 2s forwards infinite ease-in alternate;}
+    .sec_02 .inner .ani_wrap .ani_box:nth-child(3){animation: ani_02_3 2s forwards infinite ease-in alternate;}
+    @keyframes ani_02_1{0%{width: 24.0rem; height: 24.0rem; top: 50%; left: 50%; transform: translate3d(-50%,-50%,0);} 100%{width: 12.0rem; height: 12.0rem; top: 50%; left: 50%; transform: translate3d(-50%,-50%,0);}}
+    @keyframes ani_02_2{0%{width: 24.0rem; height: 24.0rem; top: 50%; left: 50%; transform: translate3d(-50%,-50%,0);} 100%{width: 12.0rem; height: 12.0rem; top: 0; left: 0; transform: translate3d(0);}}
+    @keyframes ani_02_3{0%{width: 24.0rem; height: 24.0rem; top: 50%; left: 50%; transform: translate3d(-50%,-50%,0);} 100%{width: 12.0rem; height: 12.0rem; top: calc(100% - 12.0rem); left: calc(100% - 12.0rem); transform: translate3d(0);}}
+    .sec_03 .inner .ani_wrap{width: 32.0rem; margin-right: 12.0rem;}
+    .sec_03 .inner .ani_wrap .ani_box:nth-child(1){width: 16.0rem; height: 16.0rem; top: 0; ; animation: ani_03_1 2s forwards infinite ease-in-out alternate;}
+    .sec_03 .inner .ani_wrap .ani_box:nth-child(2){width: 16.0rem; height: 16.0rem; top: 50%;  animation: ani_03_2 2s forwards infinite ease-in-out alternate;}
+    .sec_03 .inner .ani_wrap .ani_box:nth-child(3){width: 16.0rem; height: 16.0rem; top: calc(100% - 16.0rem);  animation: ani_03_3 2s forwards infinite ease-in-out alternate;}
+    @keyframes ani_03_1{0%{left: calc(100% - 16.0rem); transform: translateX(0);} 50%{left: 50%; transform: translateX(-50%)} 100%{left: 0; transform: translateX(0);}}
+    @keyframes ani_03_2{0%{left: 0; transform: translateX(0) translateY(-50%);} 50%{left: 50%; transform: translateX(-50%) translateY(-50%);} 100%{left: calc(100% - 16.0rem); transform: translateX(0) translateY(-50%);}}
+    @keyframes ani_03_3{0%{left: calc(100% - 16.0rem); transform: translateX(0);} 50%{left: 50%; transform: translateX(-50%);} 100%{left: 0; transform: translateX(0);}}
+    .sec_04 .inner .ani_wrap{width: 48.0rem; margin-left: 6.0rem;}
+    .sec_04 .inner .ani_wrap .ani_box:nth-child(1){animation: ani_04_1 2s forwards infinite ease-in alternate;}
+    .sec_04 .inner .ani_wrap .ani_box:nth-child(2){animation: ani_04_2 2s forwards infinite ease-in alternate;}
+    .sec_04 .inner .ani_wrap .ani_box:nth-child(3){animation: ani_04_3 2s forwards infinite ease-in alternate;}
+    @keyframes ani_04_1{0%{width: 24.0rem; height: 24.0rem; top: 50%; left: 50%; transform: translate3d(-50%,-50%,0);} 100%{width: 12.0rem; height: 12.0rem; top: 50%; left: 50%; transform: translate3d(-50%,-50%,0);}}
+    @keyframes ani_04_2{0%{width: 24.0rem; height: 24.0rem; top: 50%; left: 50%; transform: translate3d(-50%,-50%,0);} 100%{width: 12.0rem; height: 12.0rem; top:0; left: calc(100% - 12.0rem);; transform: translate3d(0);}}
+    @keyframes ani_04_3{0%{width: 24.0rem; height: 24.0rem; top: 50%; left: 50%; transform: translate3d(-50%,-50%,0);} 100%{width: 12.0rem; height: 12.0rem; top: calc(100% - 12.0rem); left: 0; transform: translate3d(0);}}
+    .sec_05 .inner .ani_wrap{width: 24.0rem; margin-right: 12.0rem;}
+    .sec_05 .inner .ani_wrap .ani_box:nth-child(1){left: 50%; transform: translateX(-50%); animation: ani_05_1 2s forwards infinite ease-out alternate;}
+    .sec_05 .inner .ani_wrap .ani_box:nth-child(2){left: 50%; transform: translateX(-50%); animation: ani_05_2 2s forwards infinite ease-out alternate;}
+    @keyframes ani_05_1{0%{width: 12.0rem; height: 12.0rem; top: 0;} 100%{width: 24.0rem; height: 24.0rem; top: calc(50% - 12.0rem);}}
+    @keyframes ani_05_2{0%{width: 12.0rem; height: 12.0rem; top: calc(100% - 12.0rem);} 100%{width: 24.0rem; height: 24.0rem; top: calc(50% - 12.0rem);}}
+}
