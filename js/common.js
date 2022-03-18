@@ -7,6 +7,26 @@ $(document).ready(function(){
     nav_m();
     detailPage();
     rolling();
+    slide(".detailPage_slide_wrap1",".next1",".prev1");
+    slide(".detailPage_slide_wrap2",".next2",".prev2");
+    slide(".detailPage_slide_wrap3",".next3",".prev3");
+    slide(".detailPage_slide_wrap4",".next4",".prev4");
+    slide(".detailPage_slide_wrap5",".next5",".prev5");
+    slide(".detailPage_slide_wrap6",".next6",".prev6");
+    slide(".detailPage_slide_wrap7",".next7",".prev7");
+    slide(".detailPage_slide_wrap8",".next8",".prev8");
+    slide(".detailPage_slide_wrap9",".next9",".prev9");
+    slide(".detailPage_slide_wrap10",".next10",".prev10");
+    slide(".detailPage_slide_wrap11",".next11",".prev11");
+    slide(".detailPage_slide_wrap12",".next12",".prev12");
+    slide(".detailPage_slide_wrap13",".next13",".prev13");
+    slide(".detailPage_slide_wrap14",".next14",".prev14");
+    slide(".detailPage_slide_wrap15",".next15",".prev15");
+    slide(".detailPage_slide_wrap16",".next16",".prev16");
+    slide(".detailPage_slide_wrap17",".next17",".prev17");
+    slide(".detailPage_slide_wrap18",".next18",".prev18");
+    slide(".detailPage_slide_wrap19",".next19",".prev19");
+    slide(".detailPage_slide_wrap20",".next20",".prev20");
 });
 
 function control_mouse(){
@@ -22,7 +42,6 @@ function load(){
             $(".rolling_wrap").css("display","block");
         },500);
     });
-    // $("body").css("overflow-y","scroll");          
 }
 
 function mui(){
@@ -32,29 +51,23 @@ function mui(){
     });
 }
 
+function nav_m(){
+    if($(window).outerWidth() <= 1023){
+        $("header nav ul > li:nth-child(3) > a").click(function(event){
+            event.preventDefault(); //a태그 이동 불가
+            $(this).parent().children("ol").toggleClass("active");
+        });
+    }    
+}
+
 function ani(){ 
     setTimeout(function(){
-        $(".title").addClass("active");
+        $(".tit h3").addClass("active");
+        $(".tit p").addClass("active");
         $("header").addClass("inactive");
         $("header").animate({opacity:"1"},200);
-        $(".rolling_wrap").animate({opacity:"1"},300);       
-
-        var $top = $(window).scrollTop();
-        var $height = $(window).height();
-        
-            var $target = $("section .inner > ul").eq(0)
-            var $target_offset = $target.offset().top;
-
-            if($target_offset - $top < $height){
-                $target.children("li:nth-child(3n-2)").delay(100).animate({opacity:"1"},400);
-                $target.children("li:nth-child(3n-1)").delay(250).animate({opacity:"1"},400);
-                $target.children("li:nth-child(3n)").delay(400).animate({opacity:"1"},400);
-            }
-    },2000);   
-
-    $(".top").click(function(){
-        $("html").animate({scrollTop:0});
-    });
+        $(".rolling_wrap").animate({opacity:"1"},300);   
+    },1000);   
 }
 
 function scroll(){
@@ -72,33 +85,49 @@ function scroll(){
                 $target.children("li:nth-child(3n-1)").delay(250).animate({opacity:"1"},400);
                 $target.children("li:nth-child(3n)").delay(400).animate({opacity:"1"},400);
             }
-        }
-        
-        if($top > 0){
-            $(".top").fadeIn();
-            $("header").addClass("active");
-            $("header img").attr("src","images/logo_bk.png");
-        }else{
-            $(".top").fadeOut();     
-            $("header").removeClass("active");
-            $("header img").attr("src","images/logo_w.png");
-        }
-
-        $("section").css("background-position-y", - $top * 1.4);
+        }        
     });
 }
 
-function nav_m(){
-    if($(window).outerWidth() <= 1023){
-        $("header nav ul > li:nth-child(3) > a").click(function(event){
-            event.preventDefault(); //a태그 이동 불가
-            $(this).parent().children("ol").toggleClass("active");
-        });
-    }    
+var $work = true;
+var $work2 = true;
+function rolling(){    
+    var i = 1;
+    $("body").on("mousewheel", function (event) {
+        var $top = $(window).scrollTop();
+        var $Bottom = $(document).height() - $(window).height() - $(window).scrollTop();
+        var $rollTop = ($(".rolling_wrap").offset().top)-1080;
+        var $rollBottom = ($(".rolling_wrap").offset().top)+1080;        
+        var $mousewheel = event.originalEvent.wheelDelta;
+        
+            if($work2){
+                if($Bottom == 0){
+                    $work = false;
+                }else{
+                    $work = true;
+                }
+            }
+            if($work){                    
+                if($rollTop < $top && $top < $rollBottom){                       
+                    if($mousewheel == -120){
+                        i++;                
+                    }if($mousewheel == 120){
+                        i--;
+                    }; 
+                    var $xpos = 50 * i;     
+                    
+                    $(".rolling_wrap .rolling").css("transform","translateX("+(-$xpos)+"px)"); 
+                    $(".rolling_wrap .rolling").css("transform","translateX("+(+$xpos)+"px)");  
+                }            
+            }
+            
+    });                 
 }
 
-function detailPage(){    
+function detailPage(){ 
     $(".thumbnail").click(function(){
+        $work = false;
+        $work2 = false;
         $(".detailPage div").animate({scrollTop:0});
         $(".detailPage").removeClass("active");
         $(this).siblings(".detailPage").addClass("active");
@@ -106,6 +135,8 @@ function detailPage(){
     });
 
     $(".detailPage").click(function(){
+        $work = true;
+        $work2 = true;
         $(".detailPage").removeClass("active");
         $("body").css("overflow-y","scroll");
         
@@ -125,20 +156,31 @@ function detailPage(){
     });    
 }
 
-function rolling( ){
-    var $target = $(".rolling_wrap .rolling_target li");
-    var $width = $target.width();
-    var $length = $target.length;
-    $target.parent(".rolling_target").css("width", $width*$length);
-    $target.closest(".rolling_inner").css("width",$width*$length*2);
-    var $clone = $target.parent(".rolling_target").clone();
-    $target.closest(".rolling_inner").append($clone);
-
-    $($target).mouseover(function(){
-        $(this).children().attr("src","images/lolling_logo_b.png");
-    });
-    $($target).mouseleave(function(){
-        $(this).children().attr("src","images/lolling_logo_bk.png");
-    });
+function slide($target1, $target2, $target3){
+    if($(window).outerWidth() > 1025){          
+        var swiper = new Swiper(".slide_wrap", {
+            slidesPerView: 3,
+            spaceBetween: 80,
+            observer:true, 
+            observeParent:true, 
+            centeredSlides: true,
+            loop: true, 
+            autoplay: {
+              delay: 3000,
+              disableOnInteraction: false,
+            },
+        });
+        var swiper = new Swiper($target1, {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            observer:true, 
+            observeParent:true, 
+            centeredSlides: true,
+            loop: true,
+            navigation: {
+                nextEl: $target2,
+                prevEl: $target3,
+              },
+        });
+    }
 }
-

@@ -7,6 +7,16 @@ $(document).ready(function(){
     control_mouse();
     mui();
     scroll(".sec_01", 0);
+    scroll("main .inner .text p", 800);
+    scroll(".about > div .tit h3", 800);
+    scroll(".about > div .career > div h3", 800);
+    scroll(".about > div .career > div p", 800);
+    scroll(".about > div .career > div span", 800);
+    scroll(".sec_01 .inner .tit h2", 600);
+    scroll(".sec_02 .inner .tit h2", 600);
+    scroll(".sec_03 .inner .tit h2", 600);
+    scroll(".sec_04 .inner .tit h2", 600);
+    scroll(".sec_05 .inner .tit h2", 600);
     numb_click();
     thumbnail();
 });
@@ -22,14 +32,13 @@ function mui(){
     });
 }
 
-function scroll(){ 
-    //  [ PC / 스크롤 시 넘버 교체 이벤트 ]    
-    $(window).scroll(function(target, numb){       
+function scroll(target, numb){ 
+    $(window).scroll(function(){       
         var $top = $(window).scrollTop();
         var $offset_01 = ($(target).offset().top) - numb;
 
         if($offset_01 <= $top){
-            $(".sec .inner .numb").addClass("active");
+            $(target).addClass("active");
         }else{
             $(".sec .inner .numb").removeClass("active");
         }
@@ -73,7 +82,7 @@ function numb_click(){
 function thumbnail(){
     numb0();
     function numb0(){
-        for(var i = 1; i <= 15; i++){
+        for(var i = 1; i <= 16; i++){
             (function(x){
                 setTimeout(function(){
                     $("main .inner img").attr("src","images/_sub1/thumbnail_"+ x +".jpg");

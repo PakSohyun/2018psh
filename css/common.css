@@ -1,189 +1,28 @@
-@media screen and (max-width: 767px){ /* 모바일 */
-    *{box-sizing: border-box; font-family: 'Assistant',"S-CoreDream-4Regular", sans-serif;}
-    html{font-size: 55%;}
-    body ::-webkit-scrollbar{display: none;}
-    body{overflow-x: hidden; position: relative;}
-    .ko{letter-spacing: -2px; word-spacing: 1px;}
-    
-    header{position: absolute; top: 0; left: 0; z-index: 999; display: flex; justify-content: space-between; align-items: center; width: 100%; height: 0px; padding: 0px 6%; background-color: #000aff; opacity: 0; transition-duration: 0.3s;}
-    header h1 img{width: 80%;}
-    header .mui span{display: block; width: 30px; border-top: 3px solid #ddd; margin-top: 4px;}
-    header .mui.active span:nth-child(1){transform:translateY(8px) rotate(45deg);}
-    header .mui.active span:nth-child(2){opacity: 0;}
-    header .mui.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
-    header .nav_list{position: fixed; top: 0; right: -100%; width: 100%; height: 100%; background-color: #141414; transition-duration: 0.4s;}
-    header .nav_list.active{right: 0%;}
-    header nav .nav_list .mui{position: absolute; top: 18px; right: 6%;}
-    header nav .nav_list ul{padding: 60px 6% 0 6%;  overflow: hidden; transition-duration: 0.7s;}
-    header nav .nav_list ul > li{display: block;}
-    header nav .nav_list ul > li:not(:last-child){border-bottom: 1px solid rgba(255,255,255,0.15);}
-    header nav .nav_list ul > li ol{overflow: hidden; height: 0; transition-duration: 0.5s;}
-    header nav .nav_list ul > li ol.active{height: 160px;}
-    header nav .nav_list ul > li ol > li > a.active{color: #000aff; font-family: 'S-CoreDream-4Regular';}
-    header nav .nav_list ul > li ol > li > a{font-size: 1.6rem; font-family: 'S-CoreDream-1Thin'; line-height: 3.2rem; color: #fff;}
-    header nav .nav_list ul > li ol > li > a{font-size: 1.6rem; font-family: 'S-CoreDream-1Thin'; line-height: 3.2rem; color: #fff;}
-    header nav .nav_list ul > li > a{display: block; font-size: 2.0rem; font-weight: 500; line-height: 8.0rem; color: #fff;}
-    header nav .nav_list ul > li > a:hover{color: #000aff;}
-    header nav .nav_list ul > li > a.active{position: relative; font-weight: 700; color: #000aff;}
-    header.inactive{height: 55px;}
-    
-    /* scroll header */
-    header.active{position: fixed; z-index: 999; background-color: #fff; border-bottom: 3px solid #000aff;}
-    
-    .top{position: fixed; z-index: 99; right: 6%; bottom: 3.5%; display: none; width: 55px; height: 55px; border-radius: 50px; border: 1px solid #000aff; background-color: #fff; color: #000aff; font-size: 2.0rem; font-weight: 700; text-align: center; line-height: 53px;}
-    
-    .load{position: fixed; z-index: 999; top: 0; left: 0; display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; background-color: #000aff;}
-    .load span{margin: 0 10px; border-radius: 10px; background-color: #fff;}
-    .load span:nth-child(1){animation: loading 1s infinite;}
-    .load span:nth-child(2){animation: loading 1s 0.2s infinite;}
-    .load span:nth-child(3){animation: loading 1s 0.4s infinite;}
-    @keyframes loading{0%{width: 10px; height: 10px; margin: 0 15px; opacity: 0;} 100%{width: 20px; height: 20px; margin: 0 10px; opacity: 1;}}
-    
-    section{position: relative; display: none; background: url("../images/bg_w.png") repeat-y center top; background-size: 125%; text-align: center;}
-    .inner{max-width: 600px; padding: 40% 20px 100px 20px; margin: 0 auto;}
-    section .title{opacity: 0; transform: translateY(50px); transition-duration: 0.6s; cursor: default;}
-    section .title.active{opacity: 1; transform: translateY(0px);}
-    section .title h3{margin-bottom: 12px; font-size: 3.5rem; font-family: 'S-CoreDream-7ExtraBold';}
-    section .title h3 span{color: #000aff; font-family: 'S-CoreDream-7ExtraBold';}
-    section .title p:first-of-type{margin-bottom: 30px; color: #b4b4b4; font-size: 1.0rem; font-weight: 500; letter-spacing: 4px;}
-    section .title p:last-of-type{margin-bottom: 20%; padding: 0 7%; color: #b4b4b4; font-size: 1.8rem; line-height: 2.4rem; font-family: 'S-CoreDream-4Regular'; word-break: keep-all;}
-    section ul{display: flex; flex-direction: column;}
-    section ul li{display: flex; margin-bottom: 10%; height: 100%; border-radius: 15px; font-size: 0; box-shadow: 5px 5px 10px rgba(0,0,0,0.12); cursor: pointer; opacity: 0;}
-    section ul li.listNone{display: none;}
-    section ul li .detailPage{display: none;}
-    section ul li .detailPage.active{position: fixed; top: 0; left: 0; z-index: 999; display: block; width: 100%; height: 100%; background-color: rgba(0,0,0,0.92);}
-    section ul li .detailPage.active img{width: 100%;}
-    section ul li .detailPage.active > div:before{content: ''; clear: both; display: inline-block; position: fixed; top: 10px; right: 10px; width: 25px; height: 25px; border: 2px solid #141414; background: url("../images/_sub2/icon_cancle.png") no-repeat center center rgb(255, 255, 255); background-size: 90%;}
-    section ul li .thumbnail{position: relative; width: 63%;}
-    section ul li .thumbnail:before{content: ''; clear: both; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 15px 0px 0 15px; background:rgba(0, 10, 255, 0.9) no-repeat center center; transition-duration: 0.3s; opacity: 0;}
-    section ul li .thumbnail:hover:before{opacity: 1;}
-    /* section ul li .thumbnail:hover:before{background: url("../images/_sud1/ps_logo_01.png") rgba(0, 10, 255, 0.9) no-repeat center center;} 각 서브페이지 css에서 수정 */
-    section ul li .thumbnail > img{width: 100%; border-radius: 15px 0px 0 15px;}
-    section ul li dl{display: flex; align-items: center; flex-direction: column; justify-content: center; width: 37%; padding: 4%; border-radius: 0 15px 15px 0px; background-color: #fff;}
-    section ul li dl dt{margin-bottom: 12px; color: #141414; font-size: 2.4rem; font-family: 'S-CoreDream-5Medium'; line-height: 3.0rem; word-break: keep-all;}
-    section ul li dl dd{color: #969696; font-size: 1.8rem; font-family: 'S-CoreDream-4Regular'; line-height: 2.8rem; word-break: keep-all;}
-    section ul li dl span{margin-top: 20px; padding: 2px 12px; border-radius: 30px; background-color: #969696; color: #fff; font-size: 1.5rem; letter-spacing: 0px;}
-    
-    .rolling_wrap{overflow: hidden; position: absolute; left: 50%; bottom: 45px; display: none; transform: translateX(-50%); width:100%; opacity: 0;}
-    .rolling_inner{display: flex; animation: rolling 25s infinite linear;}
-    /* .rolling_inner:hover{animation-play-state:paused;} */
-    .rolling_target{font-size: 0; white-space: nowrap;}
-    .rolling_target li{display: inline-block; width: 140px; text-align: center;}
-    .rolling_target li img{width: 80%;}
-    @keyframes rolling{0%{transform:translateX(0%);} 100%{transform:translateX(-50%);}}
-}
-
-@media screen and (min-width: 768px) and (max-width: 1023px){ /* 태블릿 */
-*{box-sizing: border-box; font-family: 'Assistant',"S-CoreDream-4Regular", sans-serif;}
-html{font-size: 55%;}
-body ::-webkit-scrollbar{display: none;}
-body{overflow-x: hidden; position: relative;}
-.ko{letter-spacing: -2px; word-spacing: 1px;}
-
-header{position: absolute; top: 0; left: 0; z-index: 99; display: flex; justify-content: space-between; align-items: center; width: 100%; height: 0px; padding: 0px 6%; background-color: #000aff; opacity: 0; transition-duration: 0.3s;}
-header h1 img{width: 90%;}
-header nav ul > li{display: inline-block; padding-left: 25px;}
-header nav ul > li > a{font-size: 2rem; font-weight: 500; line-height: 80px; color: #b4b4b4;}
-header nav ul > li > a:hover{color: #fff;}
-header nav ul > li > a.active{position: relative; font-weight: 700; color: #fff;}
-header nav ul > li > a.active:after{position: absolute; top: 27px; left: 0; content: ''; clear: both; width: 100%; height: 1px; background-color: #fff;}
-header nav ul li ol.active{height: 40px; border-bottom: 2px solid #000aff;}
-header nav ul li ol{overflow: hidden; position: absolute; top: 100%; left: 0; display: flex; justify-content:end; align-items: center; width: 100%; height: 0px; padding: 0px 6%; border-bottom: 0px solid #000aff; background-color: #fff; text-align: right; transition-duration: 0.3s;}
-header nav ul li ol > li{display: inline-block; padding-left: 25px;}
-header nav ul li ol > li > a{font-size: 1.6rem; color: #141414;}
-header nav ul li ol > li > a:hover{color: #000aff;}
-header nav ul li ol > li > a.active{font-family: 'S-CoreDream-5Medium'; color: #000aff;}
-header.inactive{height: 70px;}
-
-/* scroll header */
-header.active{position: fixed; z-index: 99; background-color: #fff; border-bottom: 3px solid #000aff;}
-header.active nav ul > li > a{font-size: 2.0rem; color: #141414;}
-header.active nav ul > li > a:hover,header.active nav ul > li > a.active{color: #000aff;}
-header.active nav ul > li > a.active:after{position: absolute; top: 27px; left: 0; content: ''; clear: both; width: 100%; height: 1px; background-color: #000aff;}
-header.active nav ul li ol{background-color: #000aff;}
-header.active nav ul li ol > li > a{font-family: 'S-CoreDream-3Light'; font-size: 1.6rem; color: #c9c9c9;}
-header.active nav ul li ol > li > a:hover,header.active nav ul li ol > li > a.active{font-family: 'S-CoreDream-4Regular'; color: #fff;}
-
-.top{position: fixed; z-index: 999; right: 6%; bottom: 6%; display: none; width: 75px; height: 75px; border-radius: 50px; border: 1px solid #000aff; background-color: #fff; color: #000aff; font-size: 2.5rem; font-weight: 700; text-align: center; line-height: 73px;}
-
-.load{position: fixed; z-index: 999; top: 0; left: 0; display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; background-color: #000aff;}
-.load span{margin: 0 10px; border-radius: 10px; background-color: #fff;}
-.load span:nth-child(1){animation: loading 1s infinite;}
-.load span:nth-child(2){animation: loading 1s 0.2s infinite;}
-.load span:nth-child(3){animation: loading 1s 0.4s infinite;}
-@keyframes loading{0%{width: 10px; height: 10px; margin: 0 15px; opacity: 0;} 100%{width: 20px; height: 20px; margin: 0 10px; opacity: 1;}}
-
-section{position: relative; display: none; background: url("../images/bg_w.png") repeat-y center top; background-size: 125%; text-align: center;}
-.inner{max-width: 900px; padding: 30% 40px 130px 40px; margin: 0 auto;}
-section .title{opacity: 0; transform: translateY(50px); transition-duration: 0.6s; cursor: default;}
-section .title.active{opacity: 1; transform: translateY(0px);}
-section .title h3{margin-bottom: 20px; font-size: 5.0rem; font-family: 'S-CoreDream-7ExtraBold';}
-section .title h3 span{color: #000aff; font-family: 'S-CoreDream-7ExtraBold';}
-section .title p:first-of-type{margin-bottom: 60px; color: #b4b4b4; font-size: 1.4rem; font-weight: 500; letter-spacing: 8px;}
-section .title p:last-of-type{margin-bottom: 17%; color: #b4b4b4; font-size: 2.4rem; font-family: 'S-CoreDream-4Regular';}
-section ul{display: flex; justify-content: space-between; flex-wrap: wrap;}
-section ul li{margin-bottom: 8.408%; width: 31.95%; height: 100%; border-radius: 15px; font-size: 0; box-shadow: 9px 9px 16px rgba(0,0,0,0.12); cursor: pointer; opacity: 0;}
-section ul li:nth-child(2n){margin-top: 8.408%;}
-section ul li.listNone{width: 31.95%; height: 100%;}
-section ul li.listNone .noneImg > img{width: 100%; border-radius: 15px;}
-section ul li .detailPage{display: none;}
-section ul li .detailPage.active{position: fixed; top: 0; left: 0; z-index: 999; display: block; width: 100%; height: 100%; background-color: rgba(0,0,0,0.92);}
-section ul li .detailPage.active img{width: 100%;}
-section ul li .detailPage.active > div:before{content: ''; clear: both; display: inline-block; position: fixed; top: 15px; right: 15px; width: 35px; height: 35px; border: 2px solid #141414; background: url("../images/_sub2/icon_cancle.png") no-repeat center center rgb(255, 255, 255);}
-section ul li .thumbnail{position: relative;}
-section ul li .thumbnail:before{content: ''; clear: both; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 15px 15px 0 0; background:rgba(0, 10, 255, 0.9) no-repeat center center; transition-duration: 0.3s; opacity: 0;}
-section ul li .thumbnail:hover:before{opacity: 1;}
-/* section ul li .thumbnail:hover:before{background: url("../images/_sud1/ps_logo_01.png") rgba(0, 10, 255, 0.9) no-repeat center center;} 각 서브페이지 css에서 수정 */
-section ul li .thumbnail > img{width: 100%; border-radius: 15px 15px 0 0;}
-section ul li dl{display: flex; align-items: center; flex-direction: column; justify-content: center; min-height: 130px;padding: 13.16% 0;  border-radius: 0 0 30px 30px; background-color: #fff;}
-section ul li dl dt{margin-bottom: 12px; color: #141414; font-size: 2.4rem; font-family: 'S-CoreDream-5Medium';}
-section ul li dl dd{color: #969696; font-size: 2.0rem; font-family: 'S-CoreDream-4Regular';}
-section ul li dl span{margin-top: 20px; padding: 2px 12px; border-radius: 30px; background-color: #969696; color: #fff; font-size: 1.5rem; letter-spacing: 0px;}
-
-.rolling_wrap{overflow: hidden; position: absolute; left: 50%; bottom: 70px; display: none; transform: translateX(-50%); width:100%; opacity: 0;}
-.rolling_inner{display: flex; animation: rolling 25s infinite linear;}
-/* .rolling_inner:hover{animation-play-state:paused;} */
-.rolling_target{font-size: 0; white-space: nowrap;}
-.rolling_target li{display: inline-block; width: 200px; text-align: center;}
-.rolling_target li img{width: 80%;}
-@keyframes rolling{0%{transform:translateX(0%);} 100%{transform:translateX(-50%);}}
-}
-
-@media screen and (min-width: 1024px){ /* PC */
-*{box-sizing: border-box; font-family: 'Assistant',"S-CoreDream-4Regular", sans-serif;}
+*{box-sizing: border-box;}
 html{font-size: 62.5%;}
-body ::-webkit-scrollbar{display: none;}
+body::-webkit-scrollbar,.detailPage div::-webkit-scrollbar{width: 12px;}
+body::-webkit-scrollbar-track,.detailPage div::-webkit-scrollbar-track{background-color: #b9b9b9;}
+body::-webkit-scrollbar-thumb,.detailPage div::-webkit-scrollbar-thumb{border-radius: 12px; background-color: #888888;}
 body{overflow-x: hidden; position: relative;}
-.inner{max-width: 1300px; padding: 0 50px; margin: 0 auto;}
-.ko{letter-spacing: -2px; word-spacing: 1px;}
+.ko{letter-spacing: -1px;}
 
-header{position: absolute; top: 0; left: 0; z-index: 99; display: flex; justify-content: space-between; align-items: center; width: 100%; height: 0px; padding: 0px 8.407%; background-color: #000aff; opacity: 0; transition-duration: 0.3s;}
-header h1 img{width: 100%;}
-header nav .mui{display: none;}
-header nav ul > li{display: inline-block; padding-left: 30px;}
-header nav ul > li > a{font-size: 2rem; font-weight: 500; line-height: 80px; color: #b4b4b4;}
-header nav ul > li > a:hover{color: #fff;}
-header nav ul > li > a.active{position: relative; font-weight: 700; color: #fff;}
-header nav ul > li > a.active:after{position: absolute; top: 27px; left: 0; content: ''; clear: both; width: 100%; height: 1px; background-color: #fff;}
-header nav ul li:hover ol{height: 50px; border-bottom: 2px solid #000aff;}
-header nav ul li ol{overflow: hidden; position: absolute; top: 100%; left: 0; display: flex; justify-content:end; align-items: center; width: 100%; height: 0px; padding: 0px 6%; border-bottom: 0px solid #000aff; background-color: #fff; text-align: right; transition-duration: 0.3s;}
-header nav ul li ol > li{display: inline-block; padding-left: 30px;}
-header nav ul li ol > li > a{font-size: 1.6rem; color: #141414;}
-header nav ul li ol > li > a:hover{color: #000aff;}
-header nav ul li ol > li > a.active{font-family: 'S-CoreDream-5Medium'; color: #000aff;}
-header.inactive{height: 75px;}
-
-/* scroll header */
-header.active{position: fixed; z-index: 99; background-color: #fff; border-bottom: 3px solid #000aff;}
-header.active nav ul > li > a{font-size: 2.0rem; color: #141414;}
-header.active nav ul > li > a:hover,header.active nav ul > li > a.active{color: #000aff;}
-header.active nav ul > li > a.active:after{position: absolute; top: 27px; left: 0; content: ''; clear: both; width: 100%; height: 1px; background-color: #000aff;}
-header.active nav ul li ol{background-color: #000aff;}
-header.active nav ul li ol > li > a{font-family: 'S-CoreDream-3Light'; font-size: 1.6rem; color: #c9c9c9;}
-header.active nav ul li ol > li > a:hover,header.active nav ul li ol > li > a.active{font-family: 'S-CoreDream-4Regular'; color: #fff;}
-
-.top{position: fixed; z-index: 999; right: 8.407%; bottom: 8.26%; display: none; width: 75px; height: 75px; border-radius: 50px; border: 1px solid #000aff; background-color: #fff; color: #000aff; font-size: 2.0rem; font-weight: 700; text-align: center; line-height: 73px;}
-.top:hover{border-width: 0px; background-color: #000aff; color: #fff; line-height: 75px; cursor: pointer;}
+@media screen and (min-width: 1024px){
+    header{position: fixed; z-index: 999; width: 100%; padding: 0 6.0rem; background-color: rgba(255,255,255,0.6); backdrop-filter: blur(15px);}
+    header > div{display: flex; justify-content: space-between; align-items: center; padding: 4.0rem 2.4em 2.4rem; border-bottom: 1px solid #646464;}
+    header > div h1 img{width: 100%;}
+    header > div nav .mui{display: none;}
+    header > div nav ul > li{display: inline-block; padding-left: 3.0rem;}
+    header > div nav ul > li > a{font-size: 2.0rem; font-weight: 500;}
+    header > div nav ul > li > a:hover{color: #000aff;}
+    header > div nav ul > li > a.active{position: relative; margin: 0 2.0rem; font-weight: 700; color: #000aff;}
+    header > div nav ul > li > a.active:after{content: ''; clear: both; position: absolute; top: 50%; left: 50%; z-index: -1; transform: translate3d(-50%,-50%,0); width: 140%; height: 180%; border-radius: 50%; border: 1px solid #000aff;}
+    header nav ul > li div{position: absolute; top: 100%; left: 0; width: 100%;}
+    header nav ul > li:hover div ol{height: 4.8rem; border-bottom: 1px solid #646464;}
+    header nav ul > li div ol{overflow: hidden; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); display: flex; justify-content:end; align-items: center; width: calc(100% - 12.0rem); height: 0px; border-bottom: 0px solid #646464; background-color: rgba(255,255,255,0.75); backdrop-filter: blur(10px); text-align: right; transition-duration: 0.3s;}
+    header nav ul > li div ol > li{display: inline-block; padding: 2.4rem;}
+    header nav ul > li div ol > li > a{font-size: 1.6rem; color: #141414;}
+    header nav ul > li div ol > li > a:hover{color: #000aff;}
+    header nav ul > li div ol > li > a.active{color: #000aff; font-weight: 500;}
 
 .load{position: fixed; z-index: 999; top: 0; left: 0; display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; background-color: #000aff;}
 .load span{margin: 0 10px; border-radius: 10px; background-color: #fff;}
@@ -192,42 +31,41 @@ header.active nav ul li ol > li > a:hover,header.active nav ul li ol > li > a.ac
 .load span:nth-child(3){animation: loading 1s 0.4s infinite;}
 @keyframes loading{0%{width: 10px; height: 10px; margin: 0 15px; opacity: 0;} 100%{width: 20px; height: 20px; margin: 0 10px; opacity: 1;}}
 
-section{position: relative; display: none; padding: 17.3415% 0 250px; background: url("../images/bg_w.png") repeat-y center top; text-align: center;}
-section .title{opacity: 0; transform: translateY(50px); transition-duration: 0.6s; cursor: default;}
-section .title.active{opacity: 1; transform: translateY(0px);}
-section .title h3{margin-bottom: 20px; font-size: 5.0rem; font-family: 'S-CoreDream-7ExtraBold';}
-section .title h3 span{color: #000aff; font-family: 'S-CoreDream-7ExtraBold';}
-section .title p:first-of-type{margin-bottom: 60px; color: #b4b4b4; font-size: 1.4rem; font-weight: 500; letter-spacing: 8px;}
-section .title p:last-of-type{margin-bottom: 16.816%; color: #b4b4b4; font-size: 2.4rem; font-family: 'S-CoreDream-4Regular';}
-section ul{display: flex; justify-content: space-between; flex-wrap: wrap;}
-section ul li{margin-bottom: 8.408%; width: 31.95%; height: 100%; border-radius: 30px; font-size: 0; box-shadow: 9px 9px 16px rgba(0,0,0,0.12); cursor: pointer; opacity: 0;}
-section ul li:nth-child(2n){margin-top: 8.408%;}
-section ul li.listNone{width: 31.95%; height: 100%;}
-section ul li.listNone .noneImg > img{width: 100%; border-radius: 30px;}
-section ul li .detailPage{display: none;}
-section ul li .detailPage.active{position: fixed; top: 0; left: 0; z-index: 999; display: block; width: 100%; height: 100%; background-color: rgba(0,0,0,0.92);}
-section ul li .detailPage.active img{width: 100%;}
-section ul li .thumbnail{position: relative;}
-section ul li .thumbnail:before{content: ''; clear: both; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 30px 30px 0 0; background:rgba(0, 10, 255, 0.9) no-repeat center center; transition-duration: 0.3s; opacity: 0;}
-section ul li .thumbnail:hover:before{opacity: 1;}
-/* section ul li .thumbnail:hover:before{background: url("../images/_sud1/ps_logo_01.png") rgba(0, 10, 255, 0.9) no-repeat center center;} 각 서브페이지 css에서 수정 */
-section ul li .thumbnail > img{width: 100%; border-radius: 30px 30px 0 0;}
-section ul li dl{display: flex; align-items: center; flex-direction: column; justify-content: center; min-height: 130px;padding: 13.16% 0;  border-radius: 0 0 30px 30px; background-color: #fff;}
-section ul li dl dt{margin-bottom: 12px; color: #141414; font-size: 2.4rem; font-family: 'S-CoreDream-5Medium';}
-section ul li dl dd{color: #969696; font-size: 2.0rem; font-family: 'S-CoreDream-4Regular';}
-section ul li dl span{margin-top: 20px; padding: 2px 12px; border-radius: 30px; background-color: #969696; color: #fff; font-size: 1.5rem; letter-spacing: 0px;}
-
-.rolling_wrap{overflow: hidden; position: absolute; left: 50%; bottom: 150px; display: none; transform: translateX(-50%); width:100%; opacity: 0;}
-.rolling_inner{display: flex; animation: rolling 25s infinite linear;}
-/* .rolling_inner:hover{animation-play-state:paused;} */
-.rolling_target{font-size: 0; white-space: nowrap;}
-.rolling_target li{display: inline-block; width: 320px; text-align: center;}
-.rolling_target li img{width: 80%;}
-@keyframes rolling{0%{transform:translateX(0%);} 100%{transform:translateX(-50%);}}
+section{position: relative; display: none; padding: 9.7rem 0 0; text-align: left;}
+section .inner{padding: 0 6.0rem;}
+section .inner .tit{ width: 100%; padding: 16.8rem 5.587% 16.8rem; border-bottom: 1px solid #646464; cursor: default;}
+section .inner .tit h3{margin-bottom: 2.0rem; font-size: 12.0rem; font-weight: 600; transition-duration: 0.6s; transform: translateY(4.0rem); opacity: 0;}
+section .inner .tit p{color: #b4b4b4; font-size: 2.4rem; font-weight: 300; transition-duration: 0.6s; transform: translateY(4.0rem); opacity: 0;}
+section .inner .tit h3.active,section .inner .tit p.active{transform: translateY(0rem); opacity: 1;}
+section .inner .list_wrap{display: flex; margin-bottom: 16.8rem; border-bottom: 1px solid #646464;}
+section .inner .list_wrap > ul{width: 33.333%; font-size: 0;}
+section .inner .list_wrap > ul:not(:last-child){border-right: 1px solid #646464;}
+section .inner .list_wrap > ul > li{padding: 8.0rem 8.0rem 0;}
+section .inner .list_wrap > ul > li:last-child{padding: 8.0rem 8.0rem;}
+section .inner .list_wrap > ul > li .thumbnail{position: relative; margin-bottom: 2.0rem; background-color: #000; font-size: 0; transform: rotate(0deg);}
+section .inner .list_wrap > ul > li .thumbnail:hover{transform: rotate(-3deg);}
+section .inner .list_wrap > ul > li .thumbnail img{width: 100%; cursor: pointer;}
+section .inner .list_wrap > ul > li .thumbnail:hover:before{content: 'View'; clear: both; position: absolute; top: 50%; left: 50%; z-index: 9; transform: translate3d(-50%,-50%,0); width: 16.8rem; height: 6.4rem; border-radius: 100%; border: 1px solid #fff; cursor: pointer; font-size: 2.4rem; font-weight: 500; color: #fff; text-align: center; line-height: 6.4rem;}
+section .inner .list_wrap > ul > li .thumbnail:hover img{opacity: 0.2;}
+section .inner .list_wrap > ul > li dl{cursor: default;}
+section .inner .list_wrap > ul > li dl dt{font-size: 2.8rem; font-weight: 500; line-height: 4.2rem;}
+section .inner .list_wrap > ul > li dl dd{font-size: 2.0rem; line-height: 3.0rem;}
+.detailPage{display: none; align-items: center; justify-items: center; position: fixed; top: 0; left: 0; z-index: 9999; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9);}
+.detailPage.active{display: flex;}
+.detailPage img{width: 100%;}
+section .rolling_wrap{margin-bottom: 3.2rem;}
+section .rolling_wrap .rolling{display: flex; justify-content: center; transition-duration: 0.5s;}
+section .rolling_wrap .rolling li{margin: 4.0rem;}
+section .slide_wrap{position: relative; margin-bottom: 8.0rem;}
+section .slide_wrap .swiper-wrapper .swiper-slide .img_box{overflow: hidden; display: flex; align-items: center; justify-content: center; border-radius: 500px; background-color: #000; font-size: 0;}
+section .slide_wrap .swiper-wrapper .swiper-slide.swiper-slide-active .img_box{background-color: transparent;}
+section .slide_wrap .swiper-wrapper .swiper-slide .img_box:hover{background-color: transparent;}
+section .slide_wrap .swiper-wrapper .swiper-slide .img_box img{display: block; width: 100%; opacity: 0.3;}
+section .slide_wrap .swiper-wrapper .swiper-slide .img_box:hover img{opacity: 1;}
+section .slide_wrap .swiper-wrapper .swiper-slide.swiper-slide-active .img_box img{opacity: 1;}
+section .slide_wrap .swiper-wrapper .swiper-slide .text{position: absolute; top: 50%; left: 50%; transform: translate3d(-50%,-50%,0); z-index: 9; width: 70%;}
+section .slide_wrap .swiper-wrapper .swiper-slide .text img{width: 100%; animation: slide infinite 15s linear;}
+section .slide_wrap .swiper-wrapper .swiper-slide.swiper-slide-active .text{display: none;}
+section .slide_wrap .swiper-wrapper .swiper-slide:hover .text{display: none;}
+@keyframes slide{0%{transform: rotate(0deg);} 100%{transform: rotate(360deg);}}
 }
-
-
-
-
-
-
