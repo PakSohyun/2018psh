@@ -9,7 +9,7 @@ $(document).ready(function(){
     scroll(".sec_01", 0);
     scroll("main .inner .text p", 800);
     scroll(".about > div .tit h3", 800);
-    scroll(".about > div .career > div h3", 800);
+    scroll(".about > div .career > div h4", 800);
     scroll(".about > div .career > div p", 800);
     scroll(".about > div .career > div span", 800);
     scroll(".sec_01 .inner .tit h2", 600);
@@ -85,7 +85,7 @@ function thumbnail(){
         for(var i = 1; i <= 16; i++){
             (function(x){
                 setTimeout(function(){
-                    $("main .inner img").attr("src","images/_sub1/thumbnail_"+ x +".jpg");
+                    $("main .inner img").attr("src","images/sub1_thumbnail_"+ x +".jpg");
                 },1000*x);
             })(i);
         }

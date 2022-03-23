@@ -1,36 +1,22 @@
-@media screen and (max-width: 480px){ /* 모바일 */
-main .sub7_title{position: absolute; top: 50%; left: 50%; z-index: 99; transform: translateX(-50%) translateY(-50%); opacity: 0; transition-duration: 1s;}
-main .sub7_title img{width: 100%;}
-main .sub7_title.active{top: 28%; left: 50%; transform: translateX(-50%);}
-main .next{position: absolute; bottom: 35%; left: 50%; transform: translateX(-50%); display: flex; align-items: center; justify-content: center; min-width: 200px; width: 55%; min-height: 40px; height: 7.5%; border-radius: 100px; background-color: transparent; border: 1px solid #000aff; color: #000aff; opacity: 0; transition-duration: 0.3s;}
-main .next2{bottom: 26%;}
-main .next3{bottom: 17%;}
-main .next:hover{background-color: #000aff; color: #fff;}
-main p{padding-bottom: 0px; font-size: 2.5rem; letter-spacing: -2px;}
-/* sub7 fin */
-}
-
-@media screen and (min-width: 768px) and (max-width: 1023px){ /* 태블릿 */
-main .sub7_title{position: absolute; top: 50%; left: 50%; z-index: 99; transform: translateX(-50%) translateY(-50%); opacity: 0; transition-duration: 1s;}
-main .sub7_title img{width: 100%;}
-main .sub7_title.active{top: 28%; left: 50%; transform: translateX(-50%);}
-main .next{position: absolute; bottom: 38%; left: 50%; transform: translateX(-50%); display: flex; align-items: center; justify-content: center; min-width: 250px; width: 45%; min-height: 50px; height: 6.6%; border-radius: 100px; background-color: transparent; border: 1px solid #000aff; color: #000aff; opacity: 0; transition-duration: 0.3s;}
-main .next2{bottom: 29%;}
-main .next3{bottom: 20%;}
-main .next:hover{background-color: #000aff; color: #fff;}
-main p{padding-bottom: 0px; margin-left: 30px; font-size: 3.0rem;}
-/* sub7 fin */
-}
-
-@media screen and (min-width: 1024px){ /* PC */
-main .sub7_title{position: absolute; top: 50%; left: 50%; z-index: 99; transform: translateX(-50%) translateY(-50%); opacity: 0; transition-duration: 1s;}
-main .sub7_title img{width: 100%;}
-main .sub7_title.active{top: 28%; left: 50%; transform: translateX(-50%);}
-main .next{position: absolute; bottom: 34.5%; left: 50%; transform: translateX(-50%); display: flex; align-items: center; justify-content: center; min-width: 250px; width: 16.5%; min-height: 50px; height: 6.6%; border-radius: 100px; background-color: transparent; border: 1px solid #000aff; color: #000aff; opacity: 0; transition-duration: 0.3s;}
-main .next2{bottom: 26%;}
-main .next3{bottom: 17.5%;}
-main .next:hover{background-color: #000aff; color: #fff;}
-main p{padding-bottom: 0px; font-size: 3.0rem;}
-/* sub7 fin */
-}
-
+body{background-color: #141414;}
+header{position: fixed; z-index: 999; width: 100%; padding: 0 6.0rem; background-color: rgba(20,20,20,0.5); backdrop-filter: blur(15px);}
+header > div{display: flex; justify-content: space-between; align-items: center; padding: 4.0rem 2.4em 2.4rem; border-bottom: 1px solid #646464;}
+header > div h1 img{width: 100%;}
+header > div nav .mui{display: none;}
+header > div nav ul > li{display: inline-block; padding-left: 30px;}
+header > div nav ul > li > a{font-size: 2.0rem; font-weight: 500; color: #fff;}
+header > div nav ul > li > a:hover{color: #000aff;}
+header > div nav ul > li > a.active{position: relative; margin: 0 20px; font-weight: 700; color: #000aff;}
+header > div nav ul > li > a.active:after{content: ''; clear: both; position: absolute; top: 50%; left: 50%; z-index: -1; transform: translate3d(-50%,-50%,0); width: 140%; height: 180%; border-radius: 50%; border: 1px solid #000aff;}
+section .inner .tit h3{color: #fff; font-size: 14.0rem;}
+section .contact{display: flex; border-bottom: 1px solid #646464;}
+section .contact > div{width: 33.333%; padding: 16rem 5.587% 16rem;}
+section .contact > div h4{margin-bottom: 4.8rem; color: #fff; font-size: 2.4rem; font-weight: 500; opacity: 0; transition-duration: 0.5s;}
+section .contact > div p{display: inline-block; color: #fff; font-size: 1.6rem; font-weight: 100; line-height: 2.8rem; opacity: 0; transition-duration: 0.5s;}
+section .contact > div:not(:last-child){border-right: 1px solid #646464;}
+section .contact > div h4.active,section .contact > div p.active{opacity: 1;}
+section .inner .tit:last-of-type{position: relative;}
+section .inner .tit:last-of-type .buttom_pc{position: absolute; right: 5.587%; top: 50%; transform: translateY(-50%);}
+section .inner .tit:last-of-type .buttom_pc div{display: flex; justify-content: center; align-items: center; width: 16.0rem; height: 16.0rem;}
+section .inner .tit:last-of-type .buttom_pc div a{display: flex; justify-content: center; align-items: center; width: 16.0rem; height: 16.0rem; border: 1px solid #fff; border-radius: 100%; font-size: 3.0rem; color: #fff; background-color: #141414; background-color: transparent; transition-duration: 0.3s; }
+section .inner .tit:last-of-type .buttom_pc div a:hover{height: 8.0rem;}   

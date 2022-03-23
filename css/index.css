@@ -62,7 +62,7 @@ html, body{height: 100%; overflow: hidden;}
     main .main_title.active{top: 30%; left: 50%; transform: translateX(-50%);}
     main .next{position: absolute; bottom: 20.0rem; left: 50%; z-index: 999; transform: translateX(-50%); display: flex; align-items: center; justify-content: center; width: 24.0rem; border-radius: 100%; border: 1px solid #fff; background-color: transparent; opacity: 0; transition-duration: 0.4s;}
     main .next:hover{border: 1px solid #000aff;}
-    main .next p{ color: #fff; font-weight: 400; font-size: 4.0rem; line-height: 8.0rem; transition-duration: 0.4s;}
+    main .next p{ color: #fff; font-weight: 400; font-size: 4.0rem; line-height: 8.0rem; transition-duration: 0.3s;}
     main .next:hover p{color: #000aff;}
     main .next.active{opacity: 1;}
     main .bg div:first-child{position: absolute; top: 100%; left: 5%; height: 80%; opacity: 0; transition-duration: 1.8s;}
@@ -70,6 +70,5 @@ html, body{height: 100%; overflow: hidden;}
     main .bg div img{height: 100%; object-fit: cover;}
     main .bg div:first-child.active{top: -14%; opacity: 1;}
     main .bg div:last-child.active{bottom: -14%; opacity: 1;}
-    /* main fin */
 
 
