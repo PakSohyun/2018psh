@@ -3,7 +3,8 @@ html{font-size: 62.5%;}
 body::-webkit-scrollbar,.detailPage div::-webkit-scrollbar{width: 12px;}
 body::-webkit-scrollbar-track,.detailPage div::-webkit-scrollbar-track{background-color: #b9b9b9;}
 body::-webkit-scrollbar-thumb,.detailPage div::-webkit-scrollbar-thumb{border-radius: 12px; background-color: #888888;}
-body{overflow-x: hidden; position: relative;}
+body{position: relative;}
+body.active{overflow: hidden;}
 .ko{letter-spacing: -1px;}
 
 header{position: fixed; z-index: 999; width: 100%; padding: 0 6.0rem; background-color: rgba(255,255,255,0.6); backdrop-filter: blur(15px);}

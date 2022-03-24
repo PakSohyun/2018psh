@@ -28,6 +28,7 @@ function mui(){
         $("header").toggleClass("active");
         $(".nav_list").toggleClass("active");
         $(".mui").toggleClass("active");
+        $("body").toggleClass("active");
     });
 
     if($(window).outerWidth() < 1024){          

@@ -20,9 +20,10 @@ function ani(){
 
 function mui(){
     $(".mui").click(function(){
+        $("header").toggleClass("active");
         $(".nav_list").toggleClass("active");
         $(".mui").toggleClass("active");
-        $("header").toggleClass("active");
+        $("body").toggleClass("active");
     });
 }
 
