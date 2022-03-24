@@ -1,74 +1,42 @@
+*{box-sizing: border-box;}
 html, body{height: 100%; overflow: hidden;}
-/* 
-@media screen and (max-width: 480px){
-    html{font-size: 60%;}
-    
-    main{overflow: hidden; height: 100%; background-color: #141414;}
-    main .main_title{position: absolute; top: 52%; left: 50%; z-index: 99; transform: translateX(-50%) translateY(-50%); width: 75%; opacity: 0; transition-duration: 1s;}
-    main .main_title img{width: 100%;}
-    main .main_title.active{top: 25%; left: 50%; transform: translateX(-50%);}
-    main .next{position: absolute; bottom: 28%; left: 50%; z-index: 999; transform: translateX(-50%); display: flex; align-items: center; justify-content: center; min-width: 210px; width: 40%; min-height: 50px; height: 7%; border-radius: 100px; background-color: #000aff; color: #fff; opacity: 0; transition-duration: 0.5s;}
-    main .next.active{opacity: 1;}
-    main p{margin-left: 15px; padding-bottom: 3px; font-weight: 400; font-size: 3.5rem;}
-    main .material-icons{font-size: 5.0rem;}
-    main .bg div:first-child{position: absolute; top: 100%; left: 5%; height: 45%; opacity: 0; transition-duration: 1.8s;}
-    main .bg div:last-child{position: absolute; bottom: 100%; right: 5%; height: 45%; opacity: 0; transition-duration: 1.8s;}
-    main .bg div img{display: block; height: 100%; object-fit: cover;}
-    main .bg div:first-child.active{top: -10%; opacity: 1;}
-    main .bg div:last-child.active{bottom: -13%; opacity: 1;}
-}
+html{font-size: 62.5%;}
 
-@media screen and (min-width: 481px) and (max-width: 767px){
-    html{font-size: 70%;}
-    
-    main{overflow: hidden; height: 100%; background-color: #141414;}
-    main .main_title{position: absolute; top: 52%; left: 50%; z-index: 99; transform: translateX(-50%) translateY(-50%); width: 80%; opacity: 0; transition-duration: 1s;}
-    main .main_title img{width: 100%;}
-    main .main_title.active{top: 30%; left: 50%; transform: translateX(-50%);}
-    main .next{position: absolute; bottom: 25.283%; left: 50%; z-index: 999; transform: translateX(-50%); display: flex; align-items: center; justify-content: center; min-width: 330px; width: 40%; min-height: 60px; height: 8%; border-radius: 100px; background-color: #000aff; color: #fff; opacity: 0; transition-duration: 0.5s;}
-    main .next.active{opacity: 1;}
-    main p{margin-left: 15px; padding-bottom: 3px; font-weight: 400; font-size: 4.0rem;}
-    main .material-icons{font-size: 5.0rem;}
-    main .bg div:first-child{position: absolute; top: 100%; left: 5%; height: 50%; opacity: 0; transition-duration: 1.8s;}
-    main .bg div:last-child{position: absolute; bottom: 100%; right: 5%; height: 50%; opacity: 0; transition-duration: 1.8s;}
-    main .bg div img{display: block; height: 100%; object-fit: cover;}
-    main .bg div:first-child.active{top: -14%; opacity: 1;}
-    main .bg div:last-child.active{bottom: -14%; opacity: 1;}
-}
+main{overflow: hidden; height: 100%; background-color: #141414;}
+main .main_tit{position: absolute; top: 52%; left: 50%; z-index: 99; transform: translateX(-50%) translateY(-50%); opacity: 0; transition-duration: 1s;}
+main .main_tit img{width: 100%;}
+main .main_tit.active{top: 30%; left: 50%; transform: translateX(-50%);}
+main .next{position: absolute; bottom: 20.0rem; left: 50%; z-index: 999; transform: translateX(-50%); display: flex; align-items: center; justify-content: center; width: 24.0rem; border-radius: 100%; border: 1px solid #fff; background-color: transparent; opacity: 0; transition-duration: 0.4s;}
+main .next:hover{border: 1px solid #000aff;}
+main .next p{ color: #fff; font-weight: 400; font-size: 4.0rem; line-height: 8.0rem; transition-duration: 0.3s;}
+main .next:hover p{color: #000aff;}
+main .next.active{opacity: 1;}
+main .bg div:first-child{position: absolute; top: 100%; left: 5%; height: 80%; opacity: 0; transition-duration: 1.8s;}
+main .bg div:last-child{position: absolute; bottom: 100%; right: 5%; height: 80%; opacity: 0; transition-duration: 1.8s;}
+main .bg div img{height: 100%; object-fit: cover;}
+main .bg div:first-child.active{top: -14%; opacity: 1;}
+main .bg div:last-child.active{bottom: -14%; opacity: 1;}
 
+@media screen and (min-width: 1024px) and (max-width: 1439px){   
+    html{font-size: 50.0%;}
+    main .main_tit{width: 60%;}
+}
 @media screen and (min-width: 768px) and (max-width: 1023px){
-    html{font-size: 75%;}
-    
-    main{overflow: hidden; height: 100%; background-color: #141414;}
-    main .main_title{position: absolute; top: 52%; left: 50%; z-index: 99; transform: translateX(-50%) translateY(-50%); width: 80%; opacity: 0; transition-duration: 1s;}
-    main .main_title img{width: 100%;}
-    main .main_title.active{top: 30%; left: 50%; transform: translateX(-50%);}
-    main .next{position: absolute; bottom: 30%; left: 50%; z-index: 999; transform: translateX(-50%); display: flex; align-items: center; justify-content: center; min-width: 310px; width: 43%; min-height: 60px; height: 7%; border-radius: 100px; background-color: #000aff; color: #fff; opacity: 0; transition-duration: 0.5s;}
-    main .next.active{opacity: 1;}
-    main p{margin-left: 15px; padding-bottom: 3px; font-weight: 400; font-size: 4.0rem;}
-    main .material-icons{font-size: 5.0rem;}
-    main .bg div:first-child{position: absolute; top: 100%; left: 5%; height: 55%; opacity: 0; transition-duration: 1.8s;}
-    main .bg div:last-child{position: absolute; bottom: 100%; right: 5%; height: 55%; opacity: 0; transition-duration: 1.8s;}
-    main .bg div img{display: block; height: 100%; object-fit: cover;}
-    main .bg div:first-child.active{top: -14%; opacity: 1;}
-    main .bg div:last-child.active{bottom: -14%; opacity: 1;}
-} */
-
-    html{font-size: 62.5%;}
-    
-    main{overflow: hidden; height: 100%; background-color: #141414;}
-    main .main_title{position: absolute; top: 52%; left: 50%; z-index: 99; transform: translateX(-50%) translateY(-50%); opacity: 0; transition-duration: 1s;}
-    main .main_title img{width: 100%;}
-    main .main_title.active{top: 30%; left: 50%; transform: translateX(-50%);}
-    main .next{position: absolute; bottom: 20.0rem; left: 50%; z-index: 999; transform: translateX(-50%); display: flex; align-items: center; justify-content: center; width: 24.0rem; border-radius: 100%; border: 1px solid #fff; background-color: transparent; opacity: 0; transition-duration: 0.4s;}
-    main .next:hover{border: 1px solid #000aff;}
-    main .next p{ color: #fff; font-weight: 400; font-size: 4.0rem; line-height: 8.0rem; transition-duration: 0.3s;}
-    main .next:hover p{color: #000aff;}
-    main .next.active{opacity: 1;}
-    main .bg div:first-child{position: absolute; top: 100%; left: 5%; height: 80%; opacity: 0; transition-duration: 1.8s;}
-    main .bg div:last-child{position: absolute; bottom: 100%; right: 5%; height: 80%; opacity: 0; transition-duration: 1.8s;}
-    main .bg div img{height: 100%; object-fit: cover;}
-    main .bg div:first-child.active{top: -14%; opacity: 1;}
-    main .bg div:last-child.active{bottom: -14%; opacity: 1;}
-
-
+    main .main_tit{width: 75%;}
+    main .main_tit.active{top: 35%;}
+    main .next{bottom: 24.0rem;}
+    main .bg div:first-child{left: 3%; height: 50%;}
+    main .bg div:last-child{right: 3%; height: 50%;}
+    main .bg div:first-child.active{top: -6%;}
+    main .bg div:last-child.active{bottom: -6%;}
+}
+@media screen and (max-width: 767px){
+    html{font-size: 50.0%;}
+    main .main_tit{width: 75%;}
+    main .main_tit.active{top: 25%;}
+    main .next{bottom: 24%;}
+    main .bg div:first-child{left: 3%; height: 45%;}
+    main .bg div:last-child{right: 3%; height: 45%;}
+    main .bg div:first-child.active{top: -6%;}
+    main .bg div:last-child.active{bottom: -6%;}
+}

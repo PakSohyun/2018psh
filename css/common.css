@@ -6,23 +6,22 @@ body::-webkit-scrollbar-thumb,.detailPage div::-webkit-scrollbar-thumb{border-ra
 body{overflow-x: hidden; position: relative;}
 .ko{letter-spacing: -1px;}
 
-@media screen and (min-width: 1024px){
-    header{position: fixed; z-index: 999; width: 100%; padding: 0 6.0rem; background-color: rgba(255,255,255,0.6); backdrop-filter: blur(15px);}
-    header > div{display: flex; justify-content: space-between; align-items: center; padding: 4.0rem 2.4em 2.4rem; border-bottom: 1px solid #646464;}
-    header > div h1 img{width: 100%;}
-    header > div nav .mui{display: none;}
-    header > div nav ul > li{display: inline-block; padding-left: 3.0rem;}
-    header > div nav ul > li > a{font-size: 2.0rem; font-weight: 500;}
-    header > div nav ul > li > a:hover{color: #000aff;}
-    header > div nav ul > li > a.active{position: relative; margin: 0 2.0rem; font-weight: 700; color: #000aff;}
-    header > div nav ul > li > a.active:after{content: ''; clear: both; position: absolute; top: 50%; left: 50%; z-index: -1; transform: translate3d(-50%,-50%,0); width: 140%; height: 180%; border-radius: 50%; border: 1px solid #000aff;}
-    header nav ul > li div{position: absolute; top: 100%; left: 0; width: 100%;}
-    header nav ul > li:hover div ol{height: 4.8rem; border-bottom: 1px solid #646464;}
-    header nav ul > li div ol{overflow: hidden; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); display: flex; justify-content:end; align-items: center; width: calc(100% - 12.0rem); height: 0px; border-bottom: 0px solid #646464; background-color: rgba(255,255,255,0.75); backdrop-filter: blur(10px); text-align: right; transition-duration: 0.3s;}
-    header nav ul > li div ol > li{display: inline-block; padding: 2.4rem;}
-    header nav ul > li div ol > li > a{font-size: 1.6rem; color: #141414;}
-    header nav ul > li div ol > li > a:hover{color: #000aff;}
-    header nav ul > li div ol > li > a.active{color: #000aff; font-weight: 500;}
+header{position: fixed; z-index: 999; width: 100%; padding: 0 6.0rem; background-color: rgba(255,255,255,0.6); backdrop-filter: blur(15px);}
+header > div{display: flex; justify-content: space-between; align-items: center; padding: 4.0rem 2.4em 2.4rem; border-bottom: 1px solid #646464;}
+header > div h1 img{width: 100%;}
+header > div nav .mui{display: none;}
+header > div nav ul > li{display: inline-block; padding-left: 3.0rem;}
+header > div nav ul > li > a{font-size: 2.0rem; font-weight: 500;}
+header > div nav ul > li > a:hover{color: #000aff;}
+header > div nav ul > li > a.active{position: relative; margin: 0 2.0rem; font-weight: 700; color: #000aff;}
+header > div nav ul > li > a.active:after{content: ''; clear: both; position: absolute; top: 50%; left: 50%; z-index: -1; transform: translate3d(-50%,-50%,0); width: 140%; height: 180%; border-radius: 50%; border: 1px solid #000aff;}
+header nav ul > li div{position: absolute; top: 100%; left: 0; width: 100%;}
+header nav ul > li:hover div ol{height: 4.8rem; border-bottom: 1px solid #646464;}
+header nav ul > li div ol{overflow: hidden; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); display: flex; justify-content:end; align-items: center; width: calc(100% - 12.0rem); height: 0px; border-bottom: 0px solid #646464; background-color: rgba(255,255,255,0.75); text-align: right; transition-duration: 0.3s;}
+header nav ul > li div ol > li{display: inline-block; padding: 2.4rem;}
+header nav ul > li div ol > li > a{font-size: 1.6rem; color: #141414;}
+header nav ul > li div ol > li > a:hover{color: #000aff;}
+header nav ul > li div ol > li > a.active{color: #000aff; font-weight: 500;}
 
 .load{position: fixed; z-index: 999; top: 0; left: 0; display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; background-color: #000aff;}
 .load span{margin: 0 10px; border-radius: 10px; background-color: #fff;}
@@ -53,10 +52,12 @@ section .inner .list_wrap > ul > li dl dd{font-size: 2.0rem; line-height: 3.0rem
 .detailPage{display: none; align-items: center; justify-items: center; position: fixed; top: 0; left: 0; z-index: 9999; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9);}
 .detailPage.active{display: flex;}
 .detailPage img{width: 100%;}
-section .rolling_wrap{margin-bottom: 3.2rem;}
-section .rolling_wrap .rolling{display: flex; justify-content: center; transition-duration: 0.5s;}
-section .rolling_wrap .rolling li{margin: 4.0rem;}
-section .slide_wrap{position: relative; margin-bottom: 8.0rem;}
+section{overflow: hidden;}
+section .rolling_wrap{overflow: hidden; display: flex; justify-content: center; margin-bottom: 3.2rem;}
+section .rolling_wrap .rolling{display: flex; transition-duration: 0.5s;}
+section .rolling_wrap .rolling li{margin: 4.0rem; width: 480px;}
+section .rolling_wrap .rolling li img{width: 100%;}
+section .slide_wrap{overflow: hidden; position: relative; margin-bottom: 8.0rem;}
 section .slide_wrap .swiper-wrapper .swiper-slide .img_box{overflow: hidden; display: flex; align-items: center; justify-content: center; border-radius: 500px; background-color: #000; font-size: 0;}
 section .slide_wrap .swiper-wrapper .swiper-slide.swiper-slide-active .img_box{background-color: transparent;}
 section .slide_wrap .swiper-wrapper .swiper-slide .img_box:hover{background-color: transparent;}
@@ -68,4 +69,74 @@ section .slide_wrap .swiper-wrapper .swiper-slide .text img{width: 100%; animati
 section .slide_wrap .swiper-wrapper .swiper-slide.swiper-slide-active .text{display: none;}
 section .slide_wrap .swiper-wrapper .swiper-slide:hover .text{display: none;}
 @keyframes slide{0%{transform: rotate(0deg);} 100%{transform: rotate(360deg);}}
+
+@media screen and (min-width: 1440px) and (max-width: 1679px){
+    html{font-size: 50%;}
+    section .rolling_wrap .rolling li{margin: 4.0rem; width: 450px;}
+} 
+@media screen and (min-width: 1024px) and (max-width: 1439px){
+    html{font-size: 50%;}
+    section .inner .list_wrap > ul > li{padding: 5.6rem 5.6rem 0;}
+    section .inner .list_wrap > ul > li:last-child{padding: 5.6rem 5.6rem;}
+    section .rolling_wrap .rolling li{margin: 4.0rem; width: 350px;}
+}  
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    html{font-size: 50%;}
+    header nav ul > li:nth-child(3) div ol.active{height: 4.8rem; border-bottom: 1px solid #646464;}
+    header nav ul > li:hover div ol{height: 0;}
+    section .inner .tit{padding: 12.8rem 5.587% 12.8rem;}
+    section .inner .tit h3{font-size: 10.4rem;}
+    section .inner .list_wrap{margin-bottom: 12.8rem;}
+    section .inner .list_wrap > ul > li{padding: 5.6rem 4.0rem 2.4rem;}
+    section .inner .list_wrap > ul > li:last-child{padding: 5.6rem 4.0rem;}
+    section .inner .list_wrap > ul > li dl dt{font-size: 2.4rem;}
+    section .slide_wrap{margin-bottom: 12.8rem;}
+    section .rolling_wrap{margin-bottom: 4.8rem;}
+    section .rolling_wrap .rolling li{margin: 3.0rem; width: 320px;}
+}
+@media screen and (max-width: 767px){
+    html{font-size: 50%;}
+    header{padding: 0 3.0rem;}
+    header.active{height: 100%;}
+    header > div{position: relative; padding: 2.4rem 0.8rem;}
+    header > div h1{width: 40%;}
+    header > div nav{height: 100%;}
+    header > div nav .mui{display: block; position: absolute; top: 50%; right: 0.8rem; z-index: 99999; transform: translateY(-50%);}
+    header > div nav .mui span{display: block; width: 28px; height: 2px; background-color: #141414;}
+    header > div nav .mui.active span:nth-child(1){transform: rotate(45deg) translateY(5px) translateX(6px);}
+    header > div nav .mui.active span:nth-child(2){opacity: 0;}
+    header > div nav .mui.active span:nth-child(3){transform: rotate(-45deg) translateY(-5px) translateX(6px);}
+    header > div nav .mui span:not(:last-child){margin-bottom: 6px;}
+    header > div nav .nav_list{display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;}
+    header > div nav .nav_list ul > li > a.active{margin: 0;}
+    header > div nav .nav_list ul > li > a.active:after{display: none;}
+    header > div nav .nav_list ul > li div{overflow: hidden; position: inherit; height: 0;}
+    header > div nav .nav_list ul > li div.active{height: auto;}
+    header > div nav .nav_list ul > li div ol{position: inherit; flex-direction: column; align-items: flex-start; transform: translateX(0); width: auto; height: 0; padding-top: 2.4rem;}
+    header > div nav .nav_list ul > li:hover div ol{height: 0rem; border: 0;}
+    header > div nav .nav_list ul > li div ol.active{height: auto;}
+    header > div nav .nav_list ul > li div ol li{width: 100%; border-top: 1px solid #e4e4e4; padding: 0; text-align: left;}
+    header > div nav .nav_list ul > li div ol li a{display: block; padding: 2.4rem 2.4rem; font-size: 2.0rem;}
+    header > div nav .nav_list ul > li div ol li:last-child a{padding: 2.4rem 2.4rem 0;}
+    header > div nav .nav_list.active{display: block;}
+    header > div nav .nav_list.active ul{padding: 7.2rem 3.2rem; width: 100%; height: 100%; background-color: #fff;}
+    header > div nav .nav_list.active ul > li{display: block; padding: 4.8rem 0;}
+    header > div nav .nav_list.active ul > li:not(:last-child){border-bottom: 1px solid #646464;}
+    header > div nav .nav_list.active ul > li > a{display: block; font-size: 2.4rem; padding: 0 2.4rem;}
+    section .inner{padding: 0 3.0rem;}
+    section .inner .tit{padding: 12.0rem 5.587% 12.0rem;}
+    section .inner .tit h3{font-size: 7.2rem;}
+    section .inner .list_wrap{flex-direction: column; margin-bottom: 12.0rem;}
+    section .inner .list_wrap > ul{width: 100%;}
+    section .inner .list_wrap > ul:not(:last-child){border: none;}
+    section .inner .list_wrap > ul > li{padding: 7.2rem 4.0rem 7.2rem; border: 1px solid #646464; border-width: 1px 0 0;}
+    section .inner .list_wrap > ul > li:last-child{padding: 7.2rem 4rem 7.2rem;}
+    section .inner .list_wrap > ul:first-child > li:first-child{border: none;}
+    section .inner .list_wrap > ul:last-child > li:last-child{padding: 8rem 4rem;}
+    section .rolling_wrap{margin-bottom: 4.8rem;}
+    section .rolling_wrap .rolling li{margin: 1.4rem; width: 160px;}
+    section .slide_wrap{padding: 0 40px; margin-bottom: 12.0rem;}
+    section .slide_wrap .swiper-wrapper .swiper-slide .img_box{background-color: transparent;}
+    section .slide_wrap .swiper-wrapper .swiper-slide .img_box img{opacity: 1;}
+    section .slide_wrap .swiper-wrapper .swiper-slide .text{display: none;}
 }

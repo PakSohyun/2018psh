@@ -1,6 +1,7 @@
 $(document).ready(function(){
     control_mouse();
     ani();
+    mui();
     scroll("section .contact > div h4", 800);
     scroll("section .contact > div p", 800);
 });
@@ -15,6 +16,14 @@ function ani(){
     setTimeout(function(){
         $(".tit h3").addClass("active");
     },1000);   
+}
+
+function mui(){
+    $(".mui").click(function(){
+        $(".nav_list").toggleClass("active");
+        $(".mui").toggleClass("active");
+        $("header").toggleClass("active");
+    });
 }
 
 function scroll(target, numb){ 

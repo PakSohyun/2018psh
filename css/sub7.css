@@ -20,3 +20,36 @@ section .inner .tit:last-of-type .buttom_pc{position: absolute; right: 5.587%; t
 section .inner .tit:last-of-type .buttom_pc div{display: flex; justify-content: center; align-items: center; width: 16.0rem; height: 16.0rem;}
 section .inner .tit:last-of-type .buttom_pc div a{display: flex; justify-content: center; align-items: center; width: 16.0rem; height: 16.0rem; border: 1px solid #fff; border-radius: 100%; font-size: 3.0rem; color: #fff; background-color: #141414; background-color: transparent; transition-duration: 0.3s; }
 section .inner .tit:last-of-type .buttom_pc div a:hover{height: 8.0rem;}   
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    section .contact > div{padding: 12.0rem 5.587% 12.0rem;}
+}
+@media screen and (max-width: 767px){
+    header{padding: 0 3.0rem;}
+    header.active{height: 100%;}
+    header > div{position: relative; padding: 2.4rem 0.8rem;}
+    header > div h1{width: 40%;}
+    header > div nav{height: 100%;}
+    header > div nav .mui{display: block; position: absolute; top: 50%; right: 0.8rem; z-index: 99999; transform: translateY(-50%);}
+    header > div nav .mui span{display: block; width: 28px; height: 2px; background-color: #fff;}
+    header > div nav .mui.active span:nth-child(1){transform: rotate(45deg) translateY(5px) translateX(6px);}
+    header > div nav .mui.active span:nth-child(2){opacity: 0;}
+    header > div nav .mui.active span:nth-child(3){transform: rotate(-45deg) translateY(-5px) translateX(6px);}
+    header > div nav .mui span:not(:last-child){margin-bottom: 6px;}
+    header > div nav .nav_list{display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;}
+    header > div nav .nav_list ul > li > a.active{margin: 0;}
+    header > div nav .nav_list ul > li > a.active:after{display: none;}
+    header > div nav .nav_list.active{display: block;}
+    header > div nav .nav_list.active ul{padding: 9.6rem 3.2rem; width: 100%; height: 100%; background-color: #141414;}
+    header > div nav .nav_list.active ul li{display: block; padding: 4.8rem 2.4rem;}
+    header > div nav .nav_list.active ul li:not(:last-child){border-bottom: 1px solid #646464;}
+    header > div nav .nav_list.active ul li a{display: block; font-size: 2.4rem;}
+    header > div nav .nav_list.active ul > li > a{padding: 0;}
+    section .inner .tit h3{font-size: 7.2rem;}
+    section .contact{flex-direction: column; border-width: 0 1px 1px 1px; border: 1px solid #646464;}
+    section .contact > div{width: 100%; padding: 8.0rem 4.0rem 8.0rem;}
+    section .contact > div:not(:last-child){border-right: 0; border-bottom: 1px solid #646464;}
+    section .contact > div p{font-size: 2.0rem;}
+    section .inner .tit:last-of-type .buttom_pc{position: initial; margin-top: 9.6rem;}
+    section .inner .tit:last-of-type .buttom_pc div,section .inner .tit:last-of-type .buttom_pc div a{width: 12.0rem; height: 12.0rem;}
+}

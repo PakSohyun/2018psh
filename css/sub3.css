@@ -4,3 +4,15 @@
 .detailPage img{width: auto; max-height: 100%; height: auto; max-width: 100%;}
 .swiper-button-next{left: 73.5%; color: #fff; mix-blend-mode: difference;}
 .swiper-button-prev{left: 25%; color: #fff; mix-blend-mode: difference;}
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    .detailPage_slide_wrap{width: 72.0rem; height: 96.0rem;}
+    .swiper-button-next{left: 91%;}
+    .swiper-button-prev{left: 5%;}
+}
+@media screen and (max-width: 767px){
+    .detailPage_slide_wrap{width: 75%; height: calc(100% - 8.0rem);}
+    .swiper-button-next{left: 92%;}
+    .swiper-button-prev{left: 4%;}
+    :root{--swiper-navigation-size: 28px;}
+}

@@ -4,9 +4,22 @@
 
 section .inner .list_wrap > ul > li dl dd{display: inline-block; margin-right: 0.8rem;}
 section .inner .list_wrap > ul > li dl span{display: inline-block; padding: 0.4rem 1.6rem; background-color: rgb(236, 236, 236); border-radius: 100px; font-size: 1.4rem; font-weight: 400;}
-.detailPage_slide_wrap{position: relative; overflow: hidden; width: 80.0rem; height: 80.0rem; margin: 0 auto;}
+.detailPage_slide_wrap{position: relative; overflow: hidden; width: 80.0rem; height: calc(100% - 8.0rem); margin: 0 auto;}
 .detailPage_slide_wrap .swiper-wrapper{align-items: center;}
 .detailPage .detailPage_slide_wrap .swiper-wrapper .swiper-slide{overflow-y: scroll; display: flex; align-items: flex-start; justify-content: center;}
 .detailPage img{width: 100%;}
 .swiper-button-next{left: 73.5%; color: #fff; mix-blend-mode: difference;}
 .swiper-button-prev{left: 25%; color: #fff; mix-blend-mode: difference;}
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    .detailPage_slide_wrap{width: 70%; height: calc(100% - 8.0rem);}
+    .swiper-button-next{left: 91%;}
+    .swiper-button-prev{left: 5%;}
+}
+@media screen and (max-width: 767px){
+    .detailPage_slide_wrap{width: 75%; height: calc(100% - 8.0rem);}
+    .list_wrap ul:first-child li:first-child .detailPage .detailPage_slide_wrap .swiper-wrapper .swiper-slide{height: 45%;}
+    .swiper-button-next{left: 92%;}
+    .swiper-button-prev{left: 4%;}
+    :root{--swiper-navigation-size: 28px;}
+}
