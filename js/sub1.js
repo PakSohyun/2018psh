@@ -151,7 +151,7 @@ function numb_click(){
 function thumbnail(){
     numb0();
     function numb0(){
-        for(var i = 1; i <= 16; i++){
+        for(var i = 1; i <= 17; i++){
             (function(x){
                 setTimeout(function(){
                     $("main .inner img").attr("src","images/sub1_thumbnail_"+ x +".jpg");

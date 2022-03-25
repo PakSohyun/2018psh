@@ -145,7 +145,6 @@ main .inner .text p.active{opacity: 1;}
     main .inner{padding: 16.0rem 3.0rem 0;}
     main .inner .img_box{width: 80%; margin-bottom: 8.0rem;}
     main .inner .text div p{padding: 3.2rem 1.6em; word-break: keep-all;}
-    main .inner .text div p br{display: none;}
     .about > div{padding: 0 3.0rem;}
     .about > div .tit h3{font-size: 7.2rem; padding: 0 0 8.0rem;}
     .about > div .career{display: block; border-width: 0 1px 1px 1px; border: 1px solid #646464;}
