@@ -39,7 +39,7 @@ main .inner .text p.active{opacity: 1;}
 .about > div .career > div p{display: inline-block; color: #fff; font-size: 1.6rem; font-weight: 100; line-height: 2.8rem; opacity: 0; transition-duration: 0.5s;}
 .about > div .career > div h4.active,.about > div .career > div span.active,.about > div .career > div p.active{opacity: 1;}
 .sec{overflow: hidden; height: 100%;}
-.sec_01 .numb{position: absolute; top: 16.512%; z-index: 999;}
+.sec_01 .numb{position: absolute; top: 16.512%; z-index: 99;}
 .sec_01.active .numb{position: fixed;}
 .sec_01 .numb li{display: inline-block;}   
 .sec_01 .numb a{margin-right: 20px; font-size: 2.0rem; color: #646464; font-weight: 500; transition-duration: 0.3s;}
