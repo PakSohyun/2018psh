@@ -153,7 +153,7 @@ function slide($target1, $target2, $target3){
             centeredSlides: true,
             loop: true, 
             autoplay: {
-              delay: 2500,
+              delay: 1000,
               disableOnInteraction: false,
             },
         });
@@ -179,7 +179,7 @@ function slide($target1, $target2, $target3){
             centeredSlides: true,
             loop: true, 
             autoplay: {
-              delay: 3000,
+              delay: 1000,
               disableOnInteraction: false,
             },
         });
@@ -205,7 +205,7 @@ function slide($target1, $target2, $target3){
             centeredSlides: true,
             loop: true, 
             autoplay: {
-              delay: 3000,
+              delay: 1000,
               disableOnInteraction: false,
             },
         });
