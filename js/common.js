@@ -200,7 +200,7 @@ function loop_slide(){
             loop: true, 
             autoplay: {
               delay: 1800,
-              disableOnInteraction: true,
+              disableOnInteraction: false,
             },
         });    
     }
@@ -214,7 +214,7 @@ function loop_slide(){
             loop: true, 
             autoplay: {
               delay: 1800,
-              disableOnInteraction: true,
+              disableOnInteraction: false,
             },
         });
     }
