@@ -86,7 +86,11 @@ function scroll(target, numb){
         var $top = $(window).scrollTop();
         var $offset = ($(target).offset().top) - numb;
         var $offset1 = $(".sec_01").offset().top;
+        var $bottom = $(document).height() - $(window).height();
 
+        if($top >= $bottom){
+            $(".sec_05 .tit h2").addClass("active");
+        }
         if($offset1 > $top){
             $(".sec_01").removeClass("active");
         }
