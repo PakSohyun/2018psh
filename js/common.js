@@ -154,7 +154,7 @@ function slide($target1, $target2, $target3){
             loop: true, 
             autoplay: {
               delay: 1800,
-              disableOnInteraction: false,
+              disableOnInteraction: true,
             },
         });
         var swiper = new Swiper($target1, {
@@ -180,7 +180,7 @@ function slide($target1, $target2, $target3){
             loop: true, 
             autoplay: {
               delay: 1800,
-              disableOnInteraction: false,
+              disableOnInteraction: true,
             },
         });
         var swiper = new Swiper($target1, {
