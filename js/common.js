@@ -6,7 +6,8 @@ $(document).ready(function(){
     scroll();
     rolling();
     detailPage();
-    slide_init();
+    detailPage_slide_init();
+    loop_slide();
 });
 
 function control_mouse(){
@@ -120,43 +121,31 @@ function detailPage(){
     });    
 }
 
-function slide_init(){
-    slide(".detailPage_slide_wrap1",".next1",".prev1");
-    slide(".detailPage_slide_wrap2",".next2",".prev2");
-    slide(".detailPage_slide_wrap3",".next3",".prev3");
-    slide(".detailPage_slide_wrap4",".next4",".prev4");
-    slide(".detailPage_slide_wrap5",".next5",".prev5");
-    slide(".detailPage_slide_wrap6",".next6",".prev6");
-    slide(".detailPage_slide_wrap7",".next7",".prev7");
-    slide(".detailPage_slide_wrap8",".next8",".prev8");
-    slide(".detailPage_slide_wrap9",".next9",".prev9");
-    slide(".detailPage_slide_wrap10",".next10",".prev10");
-    slide(".detailPage_slide_wrap11",".next11",".prev11");
-    slide(".detailPage_slide_wrap12",".next12",".prev12");
-    slide(".detailPage_slide_wrap13",".next13",".prev13");
-    slide(".detailPage_slide_wrap14",".next14",".prev14");
-    slide(".detailPage_slide_wrap15",".next15",".prev15");
-    slide(".detailPage_slide_wrap16",".next16",".prev16");
-    slide(".detailPage_slide_wrap17",".next17",".prev17");
-    slide(".detailPage_slide_wrap18",".next18",".prev18");
-    slide(".detailPage_slide_wrap19",".next19",".prev19");
-    slide(".detailPage_slide_wrap20",".next20",".prev20");
+function detailPage_slide_init(){
+    detailPage_slide(".detailPage_slide_wrap1",".next1",".prev1");
+    detailPage_slide(".detailPage_slide_wrap2",".next2",".prev2");
+    detailPage_slide(".detailPage_slide_wrap3",".next3",".prev3");
+    detailPage_slide(".detailPage_slide_wrap4",".next4",".prev4");
+    detailPage_slide(".detailPage_slide_wrap5",".next5",".prev5");
+    detailPage_slide(".detailPage_slide_wrap6",".next6",".prev6");
+    detailPage_slide(".detailPage_slide_wrap7",".next7",".prev7");
+    detailPage_slide(".detailPage_slide_wrap8",".next8",".prev8");
+    detailPage_slide(".detailPage_slide_wrap9",".next9",".prev9");
+    detailPage_slide(".detailPage_slide_wrap10",".next10",".prev10");
+    detailPage_slide(".detailPage_slide_wrap11",".next11",".prev11");
+    detailPage_slide(".detailPage_slide_wrap12",".next12",".prev12");
+    detailPage_slide(".detailPage_slide_wrap13",".next13",".prev13");
+    detailPage_slide(".detailPage_slide_wrap14",".next14",".prev14");
+    detailPage_slide(".detailPage_slide_wrap15",".next15",".prev15");
+    detailPage_slide(".detailPage_slide_wrap16",".next16",".prev16");
+    detailPage_slide(".detailPage_slide_wrap17",".next17",".prev17");
+    detailPage_slide(".detailPage_slide_wrap18",".next18",".prev18");
+    detailPage_slide(".detailPage_slide_wrap19",".next19",".prev19");
+    detailPage_slide(".detailPage_slide_wrap20",".next20",".prev20");
 }
 
-function slide($target1, $target2, $target3){
-    if($(window).outerWidth() >= 1024){          
-        var swiper = new Swiper(".slide_wrap", {
-            slidesPerView: 3,
-            spaceBetween: 80,
-            observer:true, 
-            observeParent:true, 
-            centeredSlides: true,
-            loop: true, 
-            autoplay: {
-              delay: 1800,
-              disableOnInteraction: true,
-            },
-        });
+function detailPage_slide($target1, $target2, $target3){
+    if($(window).outerWidth() >= 1024){  
         var swiper = new Swiper($target1, {
             slidesPerView: 1,
             spaceBetween: 0,
@@ -169,6 +158,51 @@ function slide($target1, $target2, $target3){
                 prevEl: $target3,
               },
         });
+    }
+    if(768 <= $(window).outerWidth() && $(window).outerWidth() < 1024){      
+        var swiper = new Swiper($target1, {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            observer:true, 
+            observeParent:true, 
+            centeredSlides: true,
+            loop: true,
+            navigation: {
+                nextEl: $target2,
+                prevEl: $target3,
+              },
+        });
+    }
+    if($(window).outerWidth() < 768){  
+        var swiper = new Swiper($target1, {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            observer:true, 
+            observeParent:true, 
+            centeredSlides: true,
+            loop: true,
+            navigation: {
+                nextEl: $target2,
+                prevEl: $target3,
+              },
+        });
+    }
+}
+
+function loop_slide(){
+    if($(window).outerWidth() >= 1024){          
+        var swiper = new Swiper(".slide_wrap", {
+            slidesPerView: 3,
+            spaceBetween: 80,
+            observer:true, 
+            observeParent:true, 
+            centeredSlides: true,
+            loop: true, 
+            autoplay: {
+              delay: 1800,
+              disableOnInteraction: true,
+            },
+        });    
     }
     if(768 <= $(window).outerWidth() && $(window).outerWidth() < 1024){          
         var swiper = new Swiper(".slide_wrap", {
@@ -183,18 +217,6 @@ function slide($target1, $target2, $target3){
               disableOnInteraction: true,
             },
         });
-        var swiper = new Swiper($target1, {
-            slidesPerView: 1,
-            spaceBetween: 0,
-            observer:true, 
-            observeParent:true, 
-            centeredSlides: true,
-            loop: true,
-            navigation: {
-                nextEl: $target2,
-                prevEl: $target3,
-              },
-        });
     }
     if($(window).outerWidth() < 768){          
         var swiper = new Swiper(".slide_wrap", {
@@ -208,18 +230,6 @@ function slide($target1, $target2, $target3){
               delay: 1800,
               disableOnInteraction: false,
             },
-        });
-        var swiper = new Swiper($target1, {
-            slidesPerView: 1,
-            spaceBetween: 0,
-            observer:true, 
-            observeParent:true, 
-            centeredSlides: true,
-            loop: true,
-            navigation: {
-                nextEl: $target2,
-                prevEl: $target3,
-              },
         });
     }
 }
