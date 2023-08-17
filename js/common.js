@@ -142,6 +142,22 @@ function detailPage_slide_init(){
     detailPage_slide(".detailPage_slide_wrap18",".next18",".prev18");
     detailPage_slide(".detailPage_slide_wrap19",".next19",".prev19");
     detailPage_slide(".detailPage_slide_wrap20",".next20",".prev20");
+    detailPage_slide(".detailPage_slide_wrap21",".next21",".prev21");
+    detailPage_slide(".detailPage_slide_wrap22",".next22",".prev22");
+    detailPage_slide(".detailPage_slide_wrap23",".next23",".prev23");
+    detailPage_slide(".detailPage_slide_wrap24",".next24",".prev24");
+    detailPage_slide(".detailPage_slide_wrap25",".next25",".prev25");
+    detailPage_slide(".detailPage_slide_wrap26",".next26",".prev26");
+    detailPage_slide(".detailPage_slide_wrap27",".next27",".prev27");
+    detailPage_slide(".detailPage_slide_wrap28",".next28",".prev28");
+    detailPage_slide(".detailPage_slide_wrap29",".next29",".prev29");
+    detailPage_slide(".detailPage_slide_wrap30",".next30",".prev30");
+    detailPage_slide(".detailPage_slide_wrap31",".next31",".prev31");
+    detailPage_slide(".detailPage_slide_wrap32",".next32",".prev32");
+    detailPage_slide(".detailPage_slide_wrap33",".next33",".prev33");
+    detailPage_slide(".detailPage_slide_wrap34",".next34",".prev34");
+    detailPage_slide(".detailPage_slide_wrap35",".next35",".prev35");
+    detailPage_slide(".detailPage_slide_wrap36",".next36",".prev36");
 }
 
 function detailPage_slide($target1, $target2, $target3){
