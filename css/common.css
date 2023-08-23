@@ -8,7 +8,7 @@ body.active{overflow: hidden;}
 .ko{letter-spacing: -1px;}
 
 header{position: fixed; z-index: 999; width: 100%; padding: 0 6.0rem; background-color: rgba(255,255,255,0.6); backdrop-filter: blur(15px);}
-header > div{display: flex; justify-content: space-between; align-items: center; padding: 1.6rem 2.4em 0; border-bottom: 1px solid #646464;}
+header > div{display: flex; justify-content: space-between;  align-items: center; padding: 2.4rem 2.4em 2.4rem 0; border-bottom: 1px solid #646464;}
 /* line-height: 80px;  */
 header > div h1 img{width: 100%;}
 header > div nav .mui{display: none;}
@@ -101,7 +101,7 @@ section .slide_wrap .swiper-wrapper .swiper-slide:hover .text{display: none;}
     header{padding: 0 3.0rem;}
     header.active{height: 100%;}
     header > div{position: relative; padding: 2.4rem 0.8rem;}
-    header > div h1{width: 40%;}
+    header > div h1{width: 40%; line-height: 0px}
     header > div nav{height: 100%;}
     header > div nav .mui{display: block; position: absolute; top: 50%; right: 0.8rem; z-index: 99999; transform: translateY(-50%);}
     header > div nav .mui span{display: block; width: 28px; height: 2px; background-color: #141414;}
