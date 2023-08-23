@@ -108,7 +108,7 @@ section .slide_wrap .swiper-wrapper .swiper-slide:hover .text{display: none;}
     header > div nav .mui.active span:nth-child(2){opacity: 0;}
     header > div nav .mui.active span:nth-child(3){transform: rotate(-45deg) translateY(-5px) translateX(6px);}
     header > div nav .mui span:not(:last-child){margin-bottom: 6px;}
-    header > div nav .nav_list{display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;}
+    header > div nav .nav_list{overflow: scroll; display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #fff;}
     header > div nav .nav_list ul > li > a.active{margin: 0;}
     header > div nav .nav_list ul > li > a.active:after{display: none;}
     header > div nav .nav_list ul > li div{overflow: hidden; position: inherit; height: 0;}
