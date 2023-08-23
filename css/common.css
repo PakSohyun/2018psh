@@ -98,7 +98,7 @@ section .slide_wrap .swiper-wrapper .swiper-slide:hover .text{display: none;}
 }
 @media screen and (max-width: 767px){
     html{font-size: 50%;}
-    header{padding: 0 3.0rem;}
+    header{padding: 0 0rem;}
     header.active{height: 100%;}
     header > div{position: relative; padding: 2.4rem 0.8rem;}
     header > div h1{width: 40%; line-height: 0px}
