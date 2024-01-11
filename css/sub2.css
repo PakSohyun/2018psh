@@ -1,4 +1,4 @@
-.detailPage div{overflow-y: scroll; position: absolute; top: 50%; left: 50%; transform: translate3d(-50%,-50%,0); width: 40%; height: calc(100% - 8.0rem);}
+.detailPage div{overflow-y: scroll; position: absolute; top: 50%; left: 50%; transform: translate3d(-50%,-50%,0); width: 30%; min-width: 500px; height: calc(100% - 8.0rem);}
 
 @media screen and (min-width: 768px) and (max-width: 1023px){
     .detailPage div{width: 70%;}
