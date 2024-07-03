@@ -48,10 +48,11 @@ section .inner .list_wrap > ul > li .thumbnail:hover{transform: rotate(-3deg);}
 section .inner .list_wrap > ul > li .thumbnail img{width: 100%; cursor: pointer;}
 section .inner .list_wrap > ul > li .thumbnail:hover:before{content: 'View'; clear: both; position: absolute; top: 50%; left: 50%; z-index: 9; transform: translate3d(-50%,-50%,0); width: 16.8rem; height: 6.4rem; border-radius: 100%; border: 1px solid #fff; cursor: pointer; font-size: 2.4rem; font-weight: 500; color: #fff; text-align: center; line-height: 6.4rem;}
 section .inner .list_wrap > ul > li .thumbnail:hover img{opacity: 0.2;}
-section .inner .list_wrap > ul > li dl{cursor: default;}
+section .inner .list_wrap > ul > li dl{cursor: default; position: relative;}
+section .inner .list_wrap > ul > li dl span{position: absolute; bottom: 0; right: 0; font-size: 2.0rem;}
 section .inner .list_wrap > ul > li dl dt{font-size: 2.8rem; font-weight: 500; line-height: 4.2rem;}
-section .inner .list_wrap > ul > li dl dd{font-size: 2.0rem; line-height: 3.0rem; display: inline-block; width: 50%;}
-section .inner .list_wrap > ul > li dl dd:nth-child(3){text-align: right;}
+section .inner .list_wrap > ul > li dl dd{font-size: 2.0rem; line-height: 3.0rem; display: inline-block;}
+section .inner .list_wrap > ul > li dl dd:nth-of-type(2){text-align: right;}
 .detailPage{display: none; align-items: center; justify-items: center; position: fixed; top: 0; left: 0; z-index: 9999; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9);}
 .detailPage.active{display: flex;}
 .detailPage img{width: 100%;}
