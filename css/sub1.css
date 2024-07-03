@@ -103,7 +103,7 @@ main .inner .text p.active{opacity: 1;}
     html{font-size: 50%;}
     .sec_04 br{display: block;}
     .sec_04 .inner .tit{width: 50%;}
-    .sec .inner .tit h2{font-size: 16.0rem; line-height: 13.5rem;}
+    .sec .inner .tit h2{font-size: 16.0rem; line-height: 14.5rem;}
     .sec_02 .inner .ani_wrap,.sec_04 .inner .ani_wrap{margin-left: 0;}
 }   
 @media screen and (min-width: 768px) and (max-width: 1023px){
