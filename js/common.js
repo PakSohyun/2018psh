@@ -158,6 +158,10 @@ function detailPage_slide_init(){
     detailPage_slide(".detailPage_slide_wrap34",".next34",".prev34");
     detailPage_slide(".detailPage_slide_wrap35",".next35",".prev35");
     detailPage_slide(".detailPage_slide_wrap36",".next36",".prev36");
+    detailPage_slide(".detailPage_slide_wrap37",".next37",".prev37");
+    detailPage_slide(".detailPage_slide_wrap38",".next38",".prev38");
+    detailPage_slide(".detailPage_slide_wrap39",".next39",".prev39");
+    detailPage_slide(".detailPage_slide_wrap40",".next40",".prev40");
 }
 
 function detailPage_slide($target1, $target2, $target3){
