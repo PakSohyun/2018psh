@@ -8,6 +8,7 @@ $(document).ready(function(){
     detailPage();
     detailPage_slide_init();
     loop_slide();
+    con_height();
 });
 
 function control_mouse(){
@@ -96,7 +97,7 @@ function detailPage(){
         $(".detailPage .detailPage_slide_wrap .swiper-wrapper .swiper-slide").animate({scrollTop:0});
         $(".detailPage").removeClass("active");
         $(this).siblings(".detailPage").addClass("active");
-        $("body").css("overflow-y","hidden");        
+        $("body").css("overflow-y","hidden");     
     });
 
     $(".detailPage").click(function(){
@@ -119,6 +120,8 @@ function detailPage(){
     $(".detailPage div img").click(function(){
         $(".detailPage div").animate({scrollTop:0});
     });    
+ 
+    
 }
 
 function detailPage_slide_init(){
