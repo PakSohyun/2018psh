@@ -103,24 +103,24 @@ function scroll(target, numb){
         var $offset4 = $(".sec_04").offset().top;
         var $offset5 = $(".sec_05").offset().top;
             
-        if(767 < $(window).outerWidth() && $(window).outerWidth() <= 1680){
-            if($offset5 <= $top/0.9){
+        // if(767 < $(window).outerWidth() && $(window).outerWidth() <= 1680){
+            if($offset5 <= $top/0.95){
                 $(".sec .inner .numb a").removeClass("active");
                 $(".sec .inner .numb #sec_05").addClass("active");
-            }else if($offset4 <= $top/0.9){
+            }else if($offset4 <= $top/0.95){
                 $(".sec .inner .numb a").removeClass("active");
                 $(".sec .inner .numb #sec_04").addClass("active");
-            }else if($offset3 <= $top/0.9){
+            }else if($offset3 <= $top/0.95){
                 $(".sec .inner .numb a").removeClass("active");
                 $(".sec .inner .numb #sec_03").addClass("active");
-            }else if($offset2 <= $top/0.9){
+            }else if($offset2 <= $top/0.95){
                 $(".sec .inner .numb a").removeClass("active");
                 $(".sec .inner .numb #sec_02").addClass("active");
             }else{
                 $(".sec .inner .numb a").removeClass("active");
                 $(".sec .inner .numb #sec_01").addClass("active");
             }  
-        }
+        // }
         if($(window).outerWidth() <= 767){
             if($offset5 <= $top/0.96){
                 $(".sec .inner .numb a").removeClass("active");
